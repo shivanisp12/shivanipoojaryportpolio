@@ -1,388 +1,168 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shivani Poojary | Finance and Analytics</title>
-<meta name="description" content="MBA in Finance and Analytics. Credit assessment, options valuation and survey analytics.">
-<meta property="og:title" content="Shivani Poojary | Finance and Analytics">
-<meta property="og:description" content="Credit risk, derivatives valuation and customer analytics.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316181b'/%3E%3Ctext x='16' y='22' font-size='17' text-anchor='middle' fill='%23c9a96a' font-family='serif'%3ESP%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shivani Poojary — Finance & Analytics</title>
+<meta name="description" content="MBA graduate in Finance & Analytics: credit risk, derivatives valuation, statistical analysis.">
+<meta property="og:title" content="Shivani Poojary — Finance & Analytics"><meta property="og:description" content="Credit risk, options pricing and data-driven decisions.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#14161a;--bg2:#1b1e23;--line:#2b2f36;--tx:#ecebe6;--mu:#9a9fa6;--ac:#c9a96a;--ac2:#e3cf9f;--in:#101215;--up:#7fc8a0;--dn:#e08a7a;color-scheme:dark}
-[data-theme=light]{--bg:#f6f5f1;--bg2:#fff;--line:#d9d6cd;--tx:#1b1d20;--mu:#5d6269;--ac:#8a6a22;--ac2:#6e5318;--in:#f0eee8;--up:#2f7d54;--dn:#b0483a;color-scheme:light}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:4px}
-#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-#bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--ac);z-index:60}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ac);color:#111;padding:8px 14px;border-radius:6px;z-index:90}.skip:focus{left:8px}
-header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.ni{max-width:1100px;margin:auto;padding:12px 22px;display:flex;align-items:center;gap:14px}
-.logo{font:500 20px Fraunces,serif;text-decoration:none;margin-right:auto}
-nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
-nav a{font-size:14px;color:var(--mu);text-decoration:none}nav a:hover,nav a[aria-current]{color:var(--tx)}
-.ib{background:none;border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:6px 11px;font:500 13px 'JetBrains Mono',monospace;cursor:pointer}
-.ib:hover{border-color:var(--ac)}
-.menu{display:none}
-@media(max-width:820px){.menu{display:block}nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--bg);padding:14px 22px 20px;border-bottom:1px solid var(--line);gap:14px}nav ul.open{display:flex}}
-main,footer{max-width:1100px;margin:auto;padding:0 22px}
-section{padding:90px 0 0}
-h1,h2,h3{font-family:Fraunces,serif;font-weight:300;letter-spacing:-.01em;margin:0}
-h1{font-size:clamp(40px,7vw,76px);line-height:1.04;max-width:15ch}
-h2{font-size:clamp(28px,4vw,40px);line-height:1.15;margin-bottom:22px;max-width:24ch}
-h3{font-size:21px;font-weight:500}
-p{margin:0 0 14px;max-width:66ch}.mu{color:var(--mu)}
-.mono{font-family:'JetBrains Mono',monospace}
-.hero{padding-top:70px;display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:start}
-@media(max-width:920px){.hero{grid-template-columns:1fr}}
-.tag{font:500 13px 'JetBrains Mono',monospace;color:var(--ac);margin-bottom:18px;display:flex;align-items:center;gap:8px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 0 0 var(--up);animation:pu 2.4s infinite}
-@keyframes pu{70%{box-shadow:0 0 0 8px transparent}}
-.lede{font-size:18px;color:var(--mu);margin-top:22px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px;padding:0;list-style:none}
-.chips li{border:1px solid var(--line);border-radius:99px;padding:5px 13px;font-size:13px;color:var(--mu)}
-.btn{display:inline-block;padding:11px 20px;border-radius:10px;font:600 15px Manrope,sans-serif;text-decoration:none;border:1px solid var(--line);margin:0 8px 10px 0;cursor:pointer;color:var(--tx);background:none;transition:transform .2s,border-color .2s}
-.btn.p{background:var(--ac);color:#15130d;border-color:var(--ac)}.btn:hover{transform:translateY(-2px);border-color:var(--ac)}
-.sp{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:24px;overflow:hidden}
-.sp::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--ac) 14%,transparent),transparent 70%)}
-.sp:hover::after{opacity:1}
-.sp h3{margin-bottom:4px}
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
-.fg label,.f label{font-size:12.5px;color:var(--mu);display:flex;flex-direction:column;gap:4px}
-input,select,textarea{background:var(--in);border:1px solid var(--line);border-radius:8px;color:var(--tx);padding:9px 10px;font:inherit;font-size:15px;width:100%}
-.ro{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:10px;margin-top:12px}
-.ro div{background:var(--in);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
-.ro b{display:block;font:500 20px 'JetBrains Mono',monospace;color:var(--ac2)}.ro span{font-size:12px;color:var(--mu)}
-canvas#ch{width:100%;height:190px;display:block;margin-top:14px;border:1px solid var(--line);border-radius:12px;background:var(--in)}
-.note{font-size:12.5px;color:var(--mu);margin:12px 0 0}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}@media(max-width:820px){.two{grid-template-columns:1fr}}
-.lab{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}@media(max-width:920px){.lab{grid-template-columns:1fr}}
-.tl{border-left:1px solid var(--line);margin-left:6px;padding-left:28px;position:relative}
-.tl::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--ac)}
-.tl ul{padding-left:18px;margin:12px 0}.tl li{margin-bottom:8px;max-width:68ch}
-.meta{color:var(--mu);font-size:14px;margin:4px 0 0}
-details.card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px}
-details.card[open]{border-color:var(--ac)}
-summary{cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}
-.more{font-size:14px;color:var(--ac);display:inline-block;margin-top:10px}details[open] .more{display:none}
-.cs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:16px;border-top:1px solid var(--line);padding-top:16px}
-.cs h4{margin:0 0 6px;font:500 13px 'JetBrains Mono',monospace;color:var(--ac)}.cs p{font-size:15px;margin:0}
-.fl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.fl button{background:none;border:1px solid var(--line);color:var(--mu);border-radius:99px;padding:6px 14px;font:500 13px Manrope,sans-serif;cursor:pointer}
-.fl button[aria-pressed=true]{border-color:var(--ac);color:var(--tx)}
-.tk{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.tk .sp{transition:opacity .25s}.tk .sp.off{opacity:.25}
-.tk p{font-size:15px;color:var(--mu);margin:8px 0 0}
-.row{padding:14px 0;border-bottom:1px solid var(--line)}.row:last-child{border:0}
-.pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.pr p{font-size:15px;color:var(--mu);margin:8px 0 0}
-.f{display:grid;gap:12px;max-width:560px}
-#st{font-size:14px;color:var(--ac2);min-height:20px}
-footer{padding:70px 22px 50px;color:var(--mu);font-size:13px}
-.boot{position:fixed;inset:0;background:#0d0e10;color:#c9a96a;z-index:100;display:grid;place-items:center;font:400 14px 'JetBrains Mono',monospace;transition:opacity .5s}
-.boot pre{margin:0;line-height:1.9}
-#pal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;display:none;align-items:flex-start;justify-content:center;padding-top:14vh}
-#pal.on{display:flex}
-.pb{width:min(560px,92vw);background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.pb input{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:15px 16px;font-size:16px}
-.pb ul{list-style:none;margin:0;padding:6px;max-height:50vh;overflow:auto}
-.pb li{padding:10px 12px;border-radius:8px;cursor:pointer;font-size:15px}
-.pb li[aria-selected=true]{background:color-mix(in srgb,var(--ac) 18%,transparent)}
-#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ac);color:#15130d;padding:9px 18px;border-radius:99px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s;z-index:95}
-#toast.on{opacity:1}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media print{#bg,#bar,header,.boot,#pal,#toast,.lab,#contact,.fl,.skip,.hero .btn{display:none!important}
-:root,[data-theme]{--bg:#fff;--bg2:#fff;--tx:#000;--mu:#333;--line:#bbb;--ac:#555;--ac2:#000}
-section{padding-top:28px}.sp::after{display:none}details.card .cs{display:grid}}
-</style>
-</head>
-<body>
-<div class="boot" id="boot" aria-hidden="true"><pre id="bt"></pre></div>
-<div id="bar"></div><canvas id="bg" aria-hidden="true"></canvas>
-<a class="skip" href="#main">Skip to content</a>
-<header><div class="ni">
-<a class="logo" href="#top">Shivani Poojary</a>
-<nav aria-label="Primary"><ul id="links">
-<li><a href="#about">About</a></li><li><a href="#lab">Lab</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#toolkit">Toolkit</a></li><li><a href="#approach">Approach</a></li><li><a href="#contact">Contact</a></li></ul></nav>
-<button class="ib" id="kb" aria-label="Open command palette">Ctrl K</button>
-<button class="ib" id="th" aria-label="Toggle light or dark theme">Theme</button>
-<button class="ib menu" id="mn" aria-expanded="false" aria-controls="links">Menu</button>
-</div></header>
+:root{--bg:#0a0b0d;--sf:#121417;--bd:#24272c;--tx:#eeece8;--mu:#9a9da3;--ac:#d9bc8c;--ac2:#7fb4ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f5f3ee;--sf:#fff;--bd:#dcd8cd;--tx:#18191b;--mu:#5b5e64;--ac:#86642f;--ac2:#2e5fb0;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f5f3ee;--sf:#fff;--bd:#dcd8cd;--tx:#18191b;--mu:#5b5e64;--ac:#86642f;--ac2:#2e5fb0;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0a0b0d;--sf:#121417;--bd:#24272c;--tx:#eeece8;--mu:#9a9da3;--ac:#d9bc8c;--ac2:#7fb4ff;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.1;margin:0}a{color:inherit}
+#bg{position:fixed;inset:0;z-index:-1;width:100%;height:100%}
+.glow{position:fixed;z-index:-1;width:60vmax;height:60vmax;border-radius:50%;filter:blur(90px);opacity:.14;pointer-events:none;background:radial-gradient(circle,var(--ac),transparent 65%);top:-25vmax;right:-15vmax;animation:dr 18s ease-in-out infinite alternate}
+@keyframes dr{to{transform:translate(-8vmax,10vmax)}}
+#ld{position:fixed;inset:0;background:var(--bg);z-index:100;display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+#ld.x{opacity:0;visibility:hidden}#ld span{font:500 28px Fraunces,serif;letter-spacing:.04em}#ld i{display:block;height:1px;background:var(--ac);margin-top:12px;animation:ln 1s ease forwards;width:0}
+@keyframes ln{to{width:100%}}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:2px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));z-index:70}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;gap:22px;padding:13px 24px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav b{font-family:Fraunces,serif;font-weight:500;margin-right:auto}nav a{text-decoration:none;color:var(--mu);font-size:14px;transition:color .2s}
+nav a:hover,nav a.on{color:var(--tx)}nav a.on{text-decoration:underline;text-decoration-color:var(--ac);text-underline-offset:6px}
+.ib{background:none;border:1px solid var(--bd);color:var(--mu);border-radius:8px;padding:5px 10px;font:12px ui-monospace,monospace;cursor:pointer}.ib:hover{color:var(--tx);border-color:var(--ac)}
+main,footer{max-width:1100px;margin:auto;padding:0 24px}section{padding:100px 0 4px}
+.ey{color:var(--ac);font:12px ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+h2{font-size:clamp(30px,4.4vw,46px);margin-bottom:30px;letter-spacing:-.01em}
+.hero{padding-top:90px;min-height:86vh;display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+h1{font-size:clamp(46px,8vw,92px);letter-spacing:-.03em}h1 span{display:inline-block;opacity:0;transform:translateY(40px);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.role{font:15px ui-monospace,monospace;color:var(--ac2);margin:22px 0 0;min-height:24px}.role::after{content:"▍";animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.lead{color:var(--mu);font-size:19px;max-width:560px;margin:18px 0 0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{padding:12px 22px;border-radius:999px;border:1px solid var(--bd);text-decoration:none;font:500 15px Inter,sans-serif;background:transparent;color:var(--tx);cursor:pointer;transition:border-color .2s,box-shadow .2s;display:inline-block}
+.btn.p{background:var(--ac);color:#15120c;border-color:var(--ac)}.btn:hover{border-color:var(--ac);box-shadow:0 0 28px -6px var(--ac)}
+.orb{aspect-ratio:1;border-radius:50%;border:1px solid var(--bd);position:relative;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--ac) 22%,transparent),transparent 60%)}
+.orb::before,.orb::after{content:"";position:absolute;inset:-14%;border-radius:50%;border:1px dashed var(--bd);animation:sp 40s linear infinite}.orb::after{inset:12%;animation-direction:reverse;border-style:solid}
+@keyframes sp{to{transform:rotate(360deg)}}.orb em{font:12px ui-monospace,monospace;color:var(--mu);font-style:normal;text-align:center}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:16px;overflow:hidden;margin-top:70px}
+.stats div{background:var(--sf);padding:24px}.stats b{font:500 40px Fraunces,serif;display:block;color:var(--ac)}.stats small{color:var(--mu);font-size:13px}
+.card{background:linear-gradient(160deg,color-mix(in srgb,var(--sf) 92%,transparent),transparent),var(--sf);border:1px solid var(--bd);border-radius:18px;padding:26px;transition:border-color .3s,transform .15s;transform-style:preserve-3d;position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--ac) 14%,transparent),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{border-color:color-mix(in srgb,var(--ac) 60%,var(--bd))}.card:hover::after{opacity:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}.card h3{font-size:23px;margin-bottom:10px}.card p{color:var(--mu);margin:0}
+.ab p{max-width:740px;color:var(--mu);font-size:18px;margin:0 0 16px}.ab p:first-child{color:var(--tx)}
+.meta{color:var(--mu);font-size:14px;margin:0 0 14px}ul{padding-left:18px;margin:0}li{color:var(--mu);margin:0 0 9px}li b{color:var(--tx);font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.tag{border:1px solid var(--bd);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mu)}
+details{margin-top:16px;border-top:1px solid var(--bd);padding-top:12px}summary{cursor:pointer;color:var(--ac);font-size:14px}
+dt{font:11px ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;margin-top:12px}dd{margin:2px 0 0;color:var(--mu)}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+label{display:block;font:12px ui-monospace,monospace;color:var(--mu);margin-bottom:12px}input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;color:var(--tx);font:inherit;margin-top:5px}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--ac);outline-offset:1px}
+.out{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}.out div{border:1px solid var(--bd);border-radius:12px;padding:16px}.out small{font:11px ui-monospace,monospace;color:var(--mu);text-transform:uppercase;letter-spacing:.1em}.out b{display:block;font:500 28px Fraunces,serif;color:var(--ac)}
+.note{font-size:12px;color:var(--mu);grid-column:1/-1}
+form{display:grid;gap:12px;max-width:560px}footer{padding:70px 24px 50px;color:var(--mu);font-size:14px}
+#cp{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);z-index:90;display:none;align-items:flex-start;justify-content:center;padding-top:16vh}#cp.o{display:flex}
+#cp div{background:var(--sf);border:1px solid var(--bd);border-radius:16px;width:min(520px,92vw);overflow:hidden}#cp input{margin:0;border:0;border-bottom:1px solid var(--bd);border-radius:0;padding:16px}
+#cp a{display:block;padding:12px 16px;text-decoration:none;color:var(--mu)}#cp a:hover,#cp a.s{background:color-mix(in srgb,var(--ac) 14%,transparent);color:var(--tx)}
+#cd,#cr{position:fixed;top:0;left:0;pointer-events:none;z-index:80;border-radius:50%;display:none}#cd{width:6px;height:6px;background:var(--ac);margin:-3px}#cr{width:34px;height:34px;border:1px solid var(--ac);margin:-17px;transition:width .2s,height .2s,margin .2s,opacity .2s;opacity:.6}
+#cr.h{width:56px;height:56px;margin:-28px;opacity:.9}@media (pointer:fine){#cd,#cr{display:block}.has-c,.has-c *{cursor:none!important}}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media (max-width:780px){.hero{grid-template-columns:1fr;min-height:auto}.orb{display:none}.calc{grid-template-columns:1fr}section{padding-top:70px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.rv,h1 span{opacity:1;transform:none}#cd,#cr{display:none!important}}
+</style></head><body class="has-c">
+<div id="ld"><div><span>Shivani Poojary</span><i></i></div></div><div id="pg"></div><div id="cd"></div><div id="cr"></div><canvas id="bg" aria-hidden="true"></canvas><div class="glow"></div>
+<header><nav aria-label="Primary"><b>SP</b><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a><button class="ib" id="k" aria-label="Open command menu">Ctrl K</button><button class="ib" id="th" aria-label="Toggle theme">Theme</button></nav></header>
+<main>
+<section class="hero"><div><div class="ey">Finance & Analytics · Udupi, India</div>
+<h1 aria-label="Shivani Poojary" id="h1"></h1>
+<p class="role" id="rl" aria-live="off"></p>
+<p class="lead">MBA graduate who turns loan files, option positions and survey data into decisions, with a record of leading people-centred community work.</p>
+<div class="btns"><a class="btn p" href="#projects">Explore my work</a><a class="btn" href="mailto:shivani12pvt@gmail.com?subject=Resume%20request">Request resume</a><a class="btn" href="#contact">Contact</a></div></div>
+<div class="orb" role="img" aria-label="Portrait placeholder"><em>portrait<br>placeholder</em></div></section>
+<div class="stats rv"><div><b data-c="28" data-s="%">0</b><small>improvement in loan processing accuracy and turnaround (internship, self-reported)</small></div><div><b data-c="182">0</b><small>survey responses analysed in SPSS</small></div><div><b data-c="20">0</b><small>NIFTY 50 stocks in options analysis</small></div><div><b data-c="12">0</b><small>volunteers led on a beach clean-up</small></div></div>
 
-<main id="main">
-<section class="hero" id="top">
-<div>
-<p class="tag"><span class="dot"></span>MBA, Finance and Analytics · </p>
-<h1>Credit risk and analytics, grounded in real loan files.</h1>
-<p class="lede">I assess auto loan applications, price options and test what drives customer satisfaction. I like work where a number has to hold up when someone checks it.</p>
-<ul class="chips"><li>Credit and affordability</li><li>Derivatives pricing</li><li>Statistical testing</li><li>Financial modeling</li></ul>
-<a class="btn p" href="#projects">Explore my work</a>
-<a class="btn" href="#lab">Try the lab</a>
-<button class="btn" id="pdf">Save resume as PDF</button>
-<a class="btn" href="mailto:shivani12pvt@gmail.com">Contact me</a>
-</div>
-<div class="sp" id="cmdcard">
-<h3>Navigate like a product</h3>
-<p class="mu" style="font-size:15px;margin-top:8px">Press Ctrl K (Cmd K on Mac) from anywhere to jump to a section, switch theme, copy my email or print this page as a resume.</p>
-<button class="btn p" id="kb2" style="margin-top:8px">Open command palette</button>
-<p class="note mono">Built as one self-contained page. No tracking.</p>
-</div>
-</section>
+<section id="about" class="ab rv"><div class="ey">About</div><h2>Rigour with the people behind the numbers</h2>
+<p>I’m an MBA graduate in Finance and Analytics. My hands-on work so far sits in two places: assessing auto-loan applications at Kanchana Hyundai, and valuing equity and index options on NIFTY 50 stocks.</p>
+<p>I enjoy problems where documentation, affordability and risk must be reconciled into a clear call, and where a statistical test can settle what intuition only suggests.</p>
+<p>I have also led teams in community and CSR programmes. I’m looking for a finance or analytics role where data turns into decisions.</p></section>
 
-<section id="about">
-<h2>Finance training, applied to paperwork that decides outcomes</h2>
-<div class="two"><div>
-<p>I completed an MBA in Finance and Analytics after a Bachelor of Commerce. My clearest hands-on experience is at an auto dealership, where I reviewed loan applications for income, repayment capacity and affordability, and compared terms across partner banks.</p>
-<p>That work showed me where credit decisions slow down: missing documents, unclear income proof and teams that are not talking to each other. I enjoy fixing that kind of friction.</p>
-</div><div>
-<p>My projects cover the other side: pricing options with Black-Scholes across the top 20 NIFTY 50 stocks, and using regression in SPSS to find what drives satisfaction in a 182-response survey.</p>
-<p>I am looking for roles in credit, risk, finance operations and analytics, where careful verification and clear numbers are the job. I have also led community and CSR work, which taught me to organise people and finish something concrete.</p>
-</div></div>
-</section>
+<section id="experience" class="rv"><div class="ey">Experience</div><h2>Professional journey</h2>
+<div class="card" data-t><h3>Finance Intern</h3><p class="meta">Kanchana Hyundai · June–July 2025</p><ul>
+<li><b>Documentation:</b> verified documents across weekly loan cases, reporting a 28% improvement in processing accuracy and approval turnaround.</li>
+<li><b>Credit assessment:</b> reviewed income profiles, repayment capacity and affordability indicators for auto loans averaging ₹7 lakh.</li>
+<li><b>Financing structure:</b> compared terms across partner banks to identify suitable lending structures.</li>
+<li><b>Risk monitoring:</b> tracked approval trends in Excel to flag affordability risk indicators for management.</li>
+<li><b>Coordination:</b> worked with sales, marketing, operations and banking partners to resolve documentation gaps.</li></ul>
+<div class="tags"><span class="tag">Excel</span><span class="tag">Credit assessment</span><span class="tag">Compliance verification</span></div></div></section>
 
-<section id="lab">
-<h2>The lab: two tools from my own field</h2>
-<div class="lab">
-<div class="sp">
-<h3>Options pricer</h3>
-<p class="mu" style="font-size:14px;margin:0">Black-Scholes for a European option, with Greeks and expiry profit and loss.</p>
-<div class="fg">
-<label>Spot<input id="S" type="number" value="1000" min="0.01" step="any"></label>
-<label>Strike<input id="K" type="number" value="1000" min="0.01" step="any"></label>
-<label>Volatility (% a year)<input id="V" type="number" value="20" min="0.01" step="any"></label>
-<label>Risk-free rate (% a year)<input id="R" type="number" value="7" step="any"></label>
-<label>Months to maturity<input id="T" type="number" value="3" min="0.1" step="any"></label>
-<label>Strategy at expiry<select id="sg"><option value="c">Long call</option><option value="p">Long put</option><option value="s">Long straddle</option></select></label>
-</div>
-<div class="ro" aria-live="polite">
-<div><b id="oc">0</b><span>Call</span></div><div><b id="op">0</b><span>Put</span></div>
-<div><b id="gd">0</b><span>Delta (call)</span></div><div><b id="gg">0</b><span>Gamma</span></div>
-<div><b id="gv">0</b><span>Vega per 1%</span></div><div><b id="gt">0</b><span>Theta a day (call)</span></div>
-</div>
-<canvas id="ch" role="img" aria-label="Profit and loss at expiry for the chosen strategy"></canvas>
-<p class="note">Profit and loss per unit, net of premium paid. No dividends. Normal distribution uses a standard numerical approximation. Illustration, not advice.</p>
-</div>
-<div class="sp">
-<h3>Auto loan EMI check</h3>
-<p class="mu" style="font-size:14px;margin:0">The affordability maths behind the loan files I reviewed.</p>
-<div class="fg">
-<label>Loan amount (rupees)<input id="LP" type="number" value="700000" min="1" step="1000"></label>
-<label>Interest (% a year)<input id="LR" type="number" value="9.5" min="0" step="any"></label>
-<label>Tenure (months)<input id="LN" type="number" value="60" min="1" step="1"></label>
-<label>Monthly income (rupees)<input id="LI" type="number" value="60000" min="1" step="1000"></label>
-</div>
-<div class="ro" aria-live="polite">
-<div><b id="em">0</b><span>EMI a month</span></div><div><b id="ti">0</b><span>Total interest</span></div><div><b id="rt">0</b><span>EMI share of income</span></div>
-</div>
-<p class="note">Seven lakh rupees is the average loan size from my internship. Rate, tenure and income here are placeholders. Lenders set their own limits.</p>
-</div>
-</div>
-</section>
+<section id="projects" class="rv"><div class="ey">Projects</div><h2>Case studies</h2><div class="grid">
+<article class="card" data-t><h3>Options Valuation & Mark-to-Market</h3><p>Financial Derivatives · top 20 NIFTY 50 stocks.</p>
+<details><summary>Read the case study</summary><dl><dt>Problem</dt><dd>Understand how option positions are valued and how P&L shifts with market conditions.</dd><dt>Approach</dt><dd>Mark-to-market and P&L analysis under varying conditions; long call, long put and combined strategies analysed for payoff, breakeven and expiry outcomes; Black-Scholes pricing of European calls and puts from volatility, risk-free rate and time to maturity.</dd></dl></details></article>
+<article class="card" data-t><h3>Customer Analytics Study</h3><p>Service quality and customer satisfaction.</p>
+<details><summary>Read the case study</summary><dl><dt>Problem</dt><dd>Identify which service quality factors drive customer satisfaction.</dd><dt>Approach</dt><dd>Regression and hypothesis testing on 182 survey responses in SPSS; Excel revenue projections linking digital booking improvements to estimated financial impact.</dd></dl></details></article></div></section>
 
-<section id="experience">
-<h2>Experience</h2>
-<div class="tl">
-<h3>Finance Intern</h3>
-<p class="meta">Kanchana Hyundai · June to July 2025</p>
-<ul>
-<li>Verified documentation across weekly loan cases, reporting a 28 percent improvement in processing accuracy and approval turnaround.</li>
-<li>Reviewed income profiles, repayment capacity and affordability indicators for auto loan applications averaging seven lakh rupees.</li>
-<li>Compared financing terms across partner banks to find suitable lending structures for each applicant profile.</li>
-<li>Tracked loan approval trends in Excel to flag affordability risks for management review.</li>
-<li>Worked with sales, marketing and operations teams and with banking partners to close documentation gaps and cut delays.</li>
-</ul>
-</div>
-</section>
+<section id="lab" class="rv"><div class="ey">Lab</div><h2>Black-Scholes calculator</h2>
+<div class="card calc"><div>
+<label>Spot price<input id="S" type="number" value="100" step="any"></label><label>Strike price<input id="K" type="number" value="100" step="any"></label>
+<label>Days to expiry<input id="T" type="number" value="90" step="any"></label><label>Risk-free rate (%)<input id="R" type="number" value="6.5" step="any"></label><label>Volatility (%)<input id="V" type="number" value="20" step="any"></label></div>
+<div class="out"><div><small>Call</small><b id="c">–</b></div><div><small>Put</small><b id="p">–</b></div><div><small>Call delta</small><b id="dc">–</b></div><div><small>Put delta</small><b id="dp">–</b></div>
+<p class="note">Illustrative European-option pricer built for this page; inputs are placeholders, not results from the academic project. No dividends assumed.</p></div></div></section>
 
-<section id="projects">
-<h2>Projects</h2>
-<details class="card" open>
-<summary><h3>Options valuation and mark to market analysis</h3><p class="mu" style="margin:8px 0 0">Financial Derivatives. Equity and index options on the top 20 NIFTY 50 stocks.</p><span class="more">Read the case study</span></summary>
-<div class="cs">
-<div><h4>QUESTION</h4><p>How do option positions gain or lose value as market conditions change, and what does each strategy pay at expiry?</p></div>
-<div><h4>APPROACH</h4><p>Marked equity and index option positions to market and analysed profit and loss under varying conditions. Worked out payoffs, breakevens and expiry outcomes for long calls, long puts and combined strategies. Priced European options with Black-Scholes.</p></div>
-<div><h4>TOOLS</h4><p>Black-Scholes model, Excel. The lab above runs the same pricing logic.</p></div>
-</div>
-</details>
-<details class="card">
-<summary><h3>Customer analytics study</h3><p class="mu" style="margin:8px 0 0">182 survey responses on service quality and satisfaction.</p><span class="more">Read the case study</span></summary>
-<div class="cs">
-<div><h4>QUESTION</h4><p>Which service quality factors drive customer satisfaction?</p></div>
-<div><h4>APPROACH</h4><p>Analysed 182 survey responses with regression and hypothesis testing in SPSS. Built Excel revenue projections linking digital booking improvements to estimated financial impact.</p></div>
-<div><h4>TOOLS</h4><p>SPSS, Excel.</p></div>
-</div>
-</details>
-</section>
+<section id="skills" class="rv"><div class="ey">Skills</div><h2>Toolkit</h2><div class="grid">
+<div class="card" data-t><h3>Finance</h3><div class="tags"><span class="tag">Financial modeling & valuation</span><span class="tag">Credit & financial risk</span><span class="tag">Derivatives & options pricing</span><span class="tag">Revenue projections</span></div></div>
+<div class="card" data-t><h3>Analytics</h3><div class="tags"><span class="tag">Hypothesis testing</span><span class="tag">Regression</span><span class="tag">Data analysis</span></div></div>
+<div class="card" data-t><h3>Tools</h3><div class="tags"><span class="tag">Advanced Excel</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">SPSS</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Google Analytics</span></div></div>
+<div class="card" data-t><h3>Working style</h3><div class="tags"><span class="tag">Process optimization</span><span class="tag">Documentation & compliance</span><span class="tag">Cross-functional coordination</span></div></div>
+<div class="card" data-t><h3>Languages</h3><div class="tags"><span class="tag">English</span><span class="tag">Kannada</span><span class="tag">Hindi</span><span class="tag">Mandarin (HSK 1)</span><span class="tag">German, Korean, Japanese (basic)</span></div></div></div></section>
 
-<section id="toolkit">
-<h2>Toolkit</h2>
-<div class="fl" role="group" aria-label="Filter toolkit">
-<button aria-pressed="true" data-f="all">All</button><button aria-pressed="false" data-f="fin">Finance</button><button aria-pressed="false" data-f="ana">Analysis</button><button aria-pressed="false" data-f="sw">Software</button><button aria-pressed="false" data-f="ppl">People</button>
-</div>
-<div class="tk">
-<div class="sp" data-c="fin"><h3>Finance</h3><p>Financial modeling and valuation. Credit and financial risk management. Derivatives and options pricing. Documentation and compliance verification.</p></div>
-<div class="sp" data-c="ana"><h3>Analysis</h3><p>Statistical hypothesis testing. Regression. Revenue projections. Process optimization.</p></div>
-<div class="sp" data-c="sw"><h3>Software</h3><p>Advanced Excel, SQL, Python, SPSS, Tableau, Power BI, Google Analytics, Microsoft Office, PowerPoint.</p></div>
-<div class="sp" data-c="ppl"><h3>Working with people</h3><p>Cross-functional coordination. Class representative and event coordinator. Team leader on community projects.</p></div>
-</div>
-</section>
+<section id="education" class="rv"><div class="ey">Education & certifications</div><h2>Foundations</h2><div class="grid">
+<div class="card" data-t><h3>MBA</h3><p>St Aloysius Institute of Management and Information Technology</p></div>
+<div class="card" data-t><h3>Bachelor of Commerce</h3><p>Mahatma Gandhi Memorial College</p></div>
+<div class="card" data-t><h3>Certifications</h3><ul><li>McKinsey Forward Program</li><li>SPSS for Data Analysis</li><li>Business Management, Santa Clara University (Infosys Springboard)</li></ul></div></div></section>
 
-<section id="background">
-<h2>Education, credentials and leadership</h2>
-<div class="two"><div>
-<div class="row"><b>MBA</b><br><span class="mu">St Aloysius Institute of Management and Information Technology</span></div>
-<div class="row"><b>Bachelor of Commerce</b><br><span class="mu">Mahatma Gandhi Memorial College</span></div>
-<div class="row"><b>Certifications</b><br><span class="mu">McKinsey Forward Program. SPSS for Data Analysis. Infosys Springboard. Business Management Certification, Santa Clara University.</span></div>
-<div class="row"><b>Languages</b><br><span class="mu">English, Kannada, Hindi. Mandarin (HSK 1). Basic German, Korean and Japanese.</span></div>
-</div><div>
-<div class="row"><b>Third place, intercollegiate speech competition</b><br><span class="mu">University College Mangalore</span></div>
-<div class="row"><b>Village Bound Session, team leader</b><br><span class="mu">Led six members for five days in Agadi village, Mundgod. Taught 30 to 35 Anganwadi children and ran health, government scheme and financial literacy sessions for about 70 villagers. A formal letter to the panchayat led to cleanliness work and women's business support.</span></div>
-<div class="row"><b>Beach clean-up drive, team leader</b><br><span class="mu">Led 12 volunteers in an NGO-organised drive and published the coverage on the college website.</span></div>
-<div class="row"><b>Also</b><br><span class="mu">Drug awareness street play with the Red Cross, Mangalore. Old age home visit and donation drive.</span></div>
-</div></div>
-</section>
+<section id="leadership" class="rv"><div class="ey">Achievements & leadership</div><h2>Leading beyond the spreadsheet</h2><div class="grid">
+<div class="card" data-t><h3>Village Bound Session</h3><p>Led a six-member team for five days in Agadi village, Mundgod, Karnataka: taught 30–35 Anganwadi children, ran health, scheme and financial literacy sessions for about 70 villagers, and submitted an infrastructure letter to the panchayat that led to cleanliness work and women’s business support.</p></div>
+<div class="card" data-t><h3>Beach Clean-up Drive</h3><p>Led 12 volunteers in an NGO-organized drive, educated residents on plastic pollution, and published the coverage on the college website.</p></div>
+<div class="card" data-t><h3>Speech & campus roles</h3><p>3rd place, Intercollegiate Speech Competition, University College Mangalore. Class Representative and Event Coordinator. Contributed to a Red Cross drug awareness street play.</p></div></div></section>
 
-<section id="approach">
-<h2>How I work</h2>
-<div class="pr">
-<div class="sp"><h3>Start from the source</h3><p>Check the document before trusting the summary. Loan files taught me that.</p></div>
-<div class="sp"><h3>Keep assumptions visible</h3><p>A number is only useful next to the inputs that produced it, which is why the lab shows every one.</p></div>
-<div class="sp"><h3>Name what a model leaves out</h3><p>Black-Scholes ignores dividends and early exercise. Saying so is part of the answer.</p></div>
-</div>
-</section>
-
-<section id="contact">
-<h2>Let's talk</h2>
-<p>Open to roles in credit, risk, finance operations and analytics. The form opens an email draft to me with your message filled in.</p>
-<form class="f" id="cf" novalidate>
-<label>Your name<input id="n" autocomplete="name"></label>
-<label>Your email<input id="e" type="email" autocomplete="email"></label>
-<label>Reason<select id="r"><option>Employment opportunity</option><option>Collaboration</option><option>Something else</option></select></label>
-<label>Message<textarea id="m" rows="4"></textarea></label>
-<div><button class="btn p" type="submit">Open email draft</button>
-<button class="btn" type="button" id="cp">Copy my email</button>
-<a class="btn" href="https://www.linkedin.com/in/shivanisp12" target="_blank" rel="noopener">LinkedIn</a></div>
-<p id="st" role="status"></p>
-</form>
-</section>
-</main>
-<footer>Shivani Poojary · <a href="mailto:shivani12pvt@gmail.com">shivani12pvt@gmail.com</a></footer>
-
-<div id="pal" role="dialog" aria-modal="true" aria-label="Command palette"><div class="pb">
-<input id="pi" placeholder="Type a command" aria-label="Search commands" autocomplete="off"><ul id="pl" role="listbox"></ul></div></div>
-<div id="toast" role="status"></div>
-
+<section id="contact" class="rv"><div class="ey">Contact</div><h2>Let’s talk</h2>
+<p style="color:var(--mu);max-width:560px">Open to finance and analytics roles. The form opens your email app with the message prefilled.</p>
+<form id="f"><input id="n" required placeholder="Your name" aria-label="Your name"><input id="e" type="email" required placeholder="Your email" aria-label="Your email"><select id="t" aria-label="Enquiry type"><option>Employment opportunity</option><option>Collaboration</option><option>General enquiry</option></select><textarea id="m" rows="5" required placeholder="Message" aria-label="Message"></textarea><button class="btn p" type="submit">Send via email</button></form>
+<div class="btns"><a class="btn" href="https://www.linkedin.com/in/shivanisp12" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="mailto:shivani12pvt@gmail.com">shivani12pvt@gmail.com</a></div></section>
+</main><footer>© 2026 Shivani Poojary · Udupi, Karnataka, India</footer>
+<div id="cp" role="dialog" aria-label="Command menu"><div><input id="ci" placeholder="Jump to section…" aria-label="Search sections"><span id="cl"></span></div></div>
 <script>
-(function(){
-var $=function(i){return document.getElementById(i)},RM=matchMedia('(prefers-reduced-motion:reduce)').matches,EMAIL='shivani12pvt@gmail.com';
-function toast(t){var e=$('toast');e.textContent=t;e.classList.add('on');setTimeout(function(){e.classList.remove('on')},1800)}
-
-/* boot */
-(function(){var b=$('boot');function done(){b.style.opacity=0;setTimeout(function(){b.remove()},500)}
-if(RM){b.remove();return}
-var L=['> loading profile','> credit risk ........ ok','> derivatives ........ ok','> analytics .......... ok','> ready'],i=0,p=$('bt');
-var t=setInterval(function(){p.textContent+=L[i++]+'\n';if(i>=L.length){clearInterval(t);setTimeout(done,350)}},170);
-b.addEventListener('click',done)})();
-
-/* theme */
-function theme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('th',t)}catch(e){}draw();net()}
-try{var s=localStorage.getItem('th');if(s)document.documentElement.setAttribute('data-theme',s)}catch(e){}
-function tog(){theme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')}
-$('th').onclick=tog;
-
-/* menu, progress, active link */
-var mn=$('mn'),ul=$('links');
-mn.onclick=function(){var o=ul.classList.toggle('open');mn.setAttribute('aria-expanded',o)};
-ul.onclick=function(e){if(e.target.tagName==='A'){ul.classList.remove('open');mn.setAttribute('aria-expanded',false)}};
-addEventListener('scroll',function(){var d=document.documentElement;$('bar').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight||1)*100)+'%'},{passive:true});
-var lk=[].slice.call(ul.querySelectorAll('a'));
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)lk.forEach(function(a){a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+x.target.id)})})},{rootMargin:'-40% 0px -55% 0px'});
-document.querySelectorAll('main section[id]').forEach(function(s){io.observe(s)})}
-
-/* spotlight */
-document.querySelectorAll('.sp').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')})});
-
-/* network background */
-var cv=$('bg'),cx=cv.getContext('2d'),P=[],raf;
-function col(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
-function net(){cancelAnimationFrame(raf);var w=cv.width=innerWidth,h=cv.height=innerHeight,n=Math.min(55,Math.floor(w*h/22000));
-P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25});
-var c=col('--ac');function step(){cx.clearRect(0,0,w,h);cx.fillStyle=c;
-for(var i=0;i<P.length;i++){var a=P[i];if(!RM){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1}
-cx.globalAlpha=.5;cx.beginPath();cx.arc(a.x,a.y,1.4,0,6.3);cx.fill();
-for(var j=i+1;j<P.length;j++){var b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){cx.globalAlpha=.16*(1-d/130);cx.strokeStyle=c;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}}
-if(!RM&&!document.hidden)raf=requestAnimationFrame(step)}
-step();if(!RM)document.addEventListener('visibilitychange',function(){if(!document.hidden){cancelAnimationFrame(raf);step()}})}
-var rz;addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){net();draw()},150)});
-
-/* options */
+var $=function(s){return document.querySelector(s)},$$=function(s){return[].slice.call(document.querySelectorAll(s))},RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+addEventListener('load',function(){setTimeout(function(){$('#ld').classList.add('x')},RM?0:900)});
+"Shivani Poojary".split("").forEach(function(c,i){var s=document.createElement('span');s.textContent=c==" "?"\u00a0":c;s.style.animationDelay=(1+i*.04)+"s";$('#h1').appendChild(s)});
+var roles=["Credit risk assessment","Options pricing","Statistical analysis","Financial modeling"],ri=0,ci=0,del=0;
+function ty(){var w=roles[ri],r=$('#rl');if(RM){r.textContent=roles.join(" · ");return}
+if(!del){ci++;if(ci>w.length+14){del=1}}else{ci--;if(ci<=0){del=0;ri=(ri+1)%roles.length}}
+r.textContent="› "+w.slice(0,Math.max(0,Math.min(ci,w.length)));setTimeout(ty,del?35:75)}ty();
+addEventListener('scroll',function(){var h=document.documentElement;$('#pg').style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+"%"},{passive:true});
+var io=new IntersectionObserver(function(r){r.forEach(function(i){if(i.isIntersecting){i.target.classList.add('in');io.unobserve(i.target);$$('[data-c]',i.target).length;i.target.querySelectorAll&&i.target.querySelectorAll('[data-c]').forEach(cnt)}})},{threshold:.1});$$('.rv').forEach(function(x){io.observe(x)});
+function cnt(el){var t=+el.dataset.c,s=el.dataset.s||"";if(RM){el.textContent=t+s;return}var st=performance.now();(function f(n){var p=Math.min(1,(n-st)/1400);el.textContent=Math.round(t*(1-Math.pow(1-p,3)))+s;if(p<1)requestAnimationFrame(f)})(st)}
+var links=$$('nav a'),so=new IntersectionObserver(function(r){r.forEach(function(i){if(i.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')=='#'+i.target.id)})})},{rootMargin:'-45% 0px -50%'});$$('section[id]').forEach(function(s){so.observe(s)});
+$$('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var b=c.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top;c.style.setProperty('--mx',x+'px');c.style.setProperty('--my',y+'px');
+if(!RM&&c.hasAttribute('data-t')&&e.pointerType=='mouse'){c.style.transform='perspective(900px) rotateX('+((y/b.height-.5)*-5)+'deg) rotateY('+((x/b.width-.5)*5)+'deg)'}});c.addEventListener('pointerleave',function(){c.style.transform=''})});
+var cd=$('#cd'),cr=$('#cr'),mx=0,my=0,rx=0,ry=0;
+addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;cd.style.transform='translate('+mx+'px,'+my+'px)';var h=e.target.closest&&e.target.closest('a,button,summary,input,select,textarea');cr.classList.toggle('h',!!h)});
+(function l(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;cr.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(l)})();
 function N(x){var t=1/(1+.2316419*Math.abs(x)),d=.3989423*Math.exp(-x*x/2),p=d*t*(.3193815+t*(-.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return x>0?1-p:p}
-function bs(){var S=+$('S').value,K=+$('K').value,v=+$('V').value/100,r=+$('R').value/100,T=+$('T').value/12;
-if(!(S>0&&K>0&&v>0&&T>0))return null;
-var q=v*Math.sqrt(T),d1=(Math.log(S/K)+(r+v*v/2)*T)/q,d2=d1-q,df=Math.exp(-r*T),ph=Math.exp(-d1*d1/2)/2.5066283;
-return{S:S,K:K,c:S*N(d1)-K*df*N(d2),p:K*df*N(-d2)-S*N(-d1),dl:N(d1),g:ph/(S*q),vg:S*ph*Math.sqrt(T)/100,th:(-S*ph*v/(2*Math.sqrt(T))-r*K*df*N(d2))/365}}
-function draw(){var o=bs(),c=$('ch'),x=c.getContext('2d'),dp=devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;
-c.width=w*dp;c.height=h*dp;x.setTransform(dp,0,0,dp,0,0);x.clearRect(0,0,w,h);
-var ids=['oc','op','gd','gg','gv','gt'];
-if(!o){ids.forEach(function(i){$(i).textContent='n/a'});return}
-var f=[o.c,o.p,o.dl,o.g,o.vg,o.th],dg=[2,2,3,5,3,3];ids.forEach(function(i,k){$(i).textContent=f[k].toFixed(dg[k])});
-var sg=$('sg').value,lo=o.K*.6,hi=o.K*1.4,pts=[],mn=1e9,mx=-1e9;
-for(var i=0;i<=80;i++){var s=lo+(hi-lo)*i/80,cl=Math.max(s-o.K,0)-o.c,pt=Math.max(o.K-s,0)-o.p,y=sg==='c'?cl:sg==='p'?pt:cl+pt;pts.push([s,y]);mn=Math.min(mn,y);mx=Math.max(mx,y)}
-mn=Math.min(mn,0);mx=Math.max(mx,0);if(mx-mn<1e-9)mx=mn+1;
-var X=function(s){return 12+(s-lo)/(hi-lo)*(w-24)},Y=function(y){return h-16-(y-mn)/(mx-mn)*(h-32)};
-x.strokeStyle=col('--line');x.lineWidth=1;x.beginPath();x.moveTo(0,Y(0));x.lineTo(w,Y(0));x.stroke();
-x.setLineDash([4,4]);x.beginPath();x.moveTo(X(o.S),0);x.lineTo(X(o.S),h);x.stroke();x.setLineDash([]);
-x.strokeStyle=col('--ac');x.lineWidth=2;x.beginPath();pts.forEach(function(q,i){i?x.lineTo(X(q[0]),Y(q[1])):x.moveTo(X(q[0]),Y(q[1]))});x.stroke();
-x.fillStyle=col('--mu');x.font='11px JetBrains Mono,monospace';x.fillText('spot',Math.min(X(o.S)+4,w-30),12);x.fillText('0',4,Y(0)-4)}
-['S','K','V','R','T','sg'].forEach(function(i){$(i).addEventListener('input',draw)});
-
-/* EMI */
-function emi(){var P=+$('LP').value,a=+$('LR').value/1200,n=+$('LN').value,inc=+$('LI').value;
-if(!(P>0&&n>0&&a>=0)){['em','ti','rt'].forEach(function(i){$(i).textContent='n/a'});return}
-var e=a===0?P/n:P*a*Math.pow(1+a,n)/(Math.pow(1+a,n)-1),f=function(v){return Math.round(v).toLocaleString('en-IN')};
-$('em').textContent=f(e);$('ti').textContent=f(e*n-P);$('rt').textContent=inc>0?(e/inc*100).toFixed(1)+'%':'n/a'}
-['LP','LR','LN','LI'].forEach(function(i){$(i).addEventListener('input',emi)});
-
-/* toolkit filter */
-document.querySelectorAll('.fl button').forEach(function(b){b.onclick=function(){
-document.querySelectorAll('.fl button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
-document.querySelectorAll('.tk .sp').forEach(function(c){c.classList.toggle('off',b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f)})}});
-
-/* actions */
-function go(id){var e=$(id);if(e)e.scrollIntoView({behavior:RM?'auto':'smooth'})}
-function copy(){try{navigator.clipboard.writeText(EMAIL).then(function(){toast('Email copied')},function(){toast(EMAIL)})}catch(e){toast(EMAIL)}}
-$('cp').onclick=copy;$('pdf').onclick=function(){document.querySelectorAll('details.card').forEach(function(d){d.open=true});print()};
-
-/* palette */
-var cmds=[['Go to About',function(){go('about')}],['Go to Lab',function(){go('lab')}],['Go to Experience',function(){go('experience')}],['Go to Projects',function(){go('projects')}],['Go to Toolkit',function(){go('toolkit')}],['Go to How I work',function(){go('approach')}],['Go to Contact',function(){go('contact')}],['Toggle light or dark theme',tog],['Copy my email',copy],['Save resume as PDF',function(){$('pdf').click()}],['Open LinkedIn',function(){open('https://www.linkedin.com/in/shivanisp12','_blank','noopener')}]],sel=0,vis=cmds,last=null;
-function render(){var q=$('pi').value.toLowerCase();vis=cmds.filter(function(c){return c[0].toLowerCase().indexOf(q)>-1});sel=Math.min(sel,Math.max(vis.length-1,0));
-$('pl').innerHTML='';vis.forEach(function(c,i){var l=document.createElement('li');l.textContent=c[0];l.setAttribute('role','option');l.setAttribute('aria-selected',i===sel);l.onclick=function(){run(i)};$('pl').appendChild(l)})}
-function run(i){if(!vis[i])return;close();vis[i][1]()}
-function openP(){last=document.activeElement;$('pal').classList.add('on');$('pi').value='';sel=0;render();$('pi').focus()}
-function close(){$('pal').classList.remove('on');if(last&&last.focus)last.focus()}
-$('kb').onclick=$('kb2').onclick=openP;
-$('pal').onclick=function(e){if(e.target===$('pal'))close()};
-$('pi').addEventListener('input',function(){sel=0;render()});
-$('pi').addEventListener('keydown',function(e){if(e.key==='ArrowDown'){sel=Math.min(sel+1,vis.length-1);render();e.preventDefault()}else if(e.key==='ArrowUp'){sel=Math.max(sel-1,0);render();e.preventDefault()}else if(e.key==='Enter')run(sel);else if(e.key==='Escape')close()});
-addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('pal').classList.contains('on')?close():openP()}});
-if(/Mac|iPhone|iPad/.test(navigator.platform))$('kb').textContent='Cmd K';
-
-/* form */
-$('cf').addEventListener('submit',function(ev){ev.preventDefault();
-var n=$('n').value.trim(),e=$('e').value.trim(),m=$('m').value.trim();
-if(!n||!/^\S+@\S+\.\S+$/.test(e)||!m){$('st').textContent='Add your name, a valid email and a message, then try again.';return}
-$('st').textContent='Opening your email app.';
-location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent($('r').value+' from '+n)+'&body='+encodeURIComponent(m+'\n\n'+n+'\n'+e)});
-
-net();draw();emi();
-})();
-</script>
-</body>
-</html>
+function bs(){var S=+$('#S').value,K=+$('#K').value,T=+$('#T').value/365,r=+$('#R').value/100,v=+$('#V').value/100,o=['#c','#p','#dc','#dp'];
+if(!(S>0&&K>0&&T>0&&v>0)){o.forEach(function(i){$(i).textContent='–'});return}
+var d1=(Math.log(S/K)+(r+v*v/2)*T)/(v*Math.sqrt(T)),d2=d1-v*Math.sqrt(T),e=Math.exp(-r*T);
+$('#c').textContent=(S*N(d1)-K*e*N(d2)).toFixed(2);$('#p').textContent=(K*e*N(-d2)-S*N(-d1)).toFixed(2);$('#dc').textContent=N(d1).toFixed(3);$('#dp').textContent=(N(d1)-1).toFixed(3)}
+$$('.calc input').forEach(function(i){i.addEventListener('input',bs)});bs();
+$('#f').addEventListener('submit',function(ev){ev.preventDefault();location.href='mailto:shivani12pvt@gmail.com?subject='+encodeURIComponent($('#t').value+' — '+$('#n').value)+'&body='+encodeURIComponent('From: '+$('#n').value+' ('+$('#e').value+')\n\n'+$('#m').value)});
+var R=document.documentElement;try{var sv=localStorage.getItem('th');if(sv)R.dataset.theme=sv}catch(e){}
+$('#th').onclick=function(){var d=R.dataset.theme||(matchMedia('(prefers-color-scheme:light)').matches?'light':'dark'),n=d=='dark'?'light':'dark';R.dataset.theme=n;try{localStorage.setItem('th',n)}catch(e){}};
+var cp=$('#cp'),cl=$('#cl'),cin=$('#ci');links.forEach(function(a){var x=document.createElement('a');x.href=a.getAttribute('href');x.textContent=a.textContent;cl.appendChild(x)});
+function op(v){cp.classList.toggle('o',v);if(v){cin.value='';fl('');cin.focus()}}function fl(q){[].forEach.call(cl.children,function(a){a.style.display=a.textContent.toLowerCase().indexOf(q.toLowerCase())>-1?'block':'none'})}
+cin.addEventListener('input',function(){fl(cin.value)});cin.addEventListener('keydown',function(e){if(e.key=='Enter'){var a=[].filter.call(cl.children,function(x){return x.style.display!='none'})[0];if(a){op(0);location.hash=a.hash}}});
+cp.addEventListener('click',function(e){if(e.target==cp||e.target.tagName=='A')op(0)});$('#k').onclick=function(){op(1)};
+addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key=='k'){e.preventDefault();op(!cp.classList.contains('o'))}if(e.key=='Escape')op(0)});
+(function(){var c=$('#bg'),x=c.getContext('2d'),P=[],W,H,m={x:-999,y:-999};if(RM)return;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight;P=[];for(var i=0;i<Math.min(70,W/18);i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25})}
+addEventListener('resize',rs);addEventListener('pointermove',function(e){m.x=e.clientX;m.y=e.clientY});rs();
+(function d(){if(document.hidden){requestAnimationFrame(d);return}x.clearRect(0,0,W,H);var col=getComputedStyle(R).getPropertyValue('--ac').trim()||'#d9bc8c';x.fillStyle=col;x.strokeStyle=col;
+P.forEach(function(p,i){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.globalAlpha=.5;x.beginPath();x.arc(p.x,p.y,1.2,0,6.3);x.fill();
+for(var j=i+1;j<P.length;j++){var q=P[j],dx=p.x-q.x,dy=p.y-q.y,D=dx*dx+dy*dy;if(D<14000){x.globalAlpha=(1-D/14000)*.16;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+var mx=p.x-m.x,my=p.y-m.y,MD=mx*mx+my*my;if(MD<25000){x.globalAlpha=(1-MD/25000)*.4;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}});requestAnimationFrame(d)})()})();
+</script></body></html>
