@@ -60,16 +60,20 @@ form{display:grid;gap:12px;max-width:560px}footer{padding:70px 24px 50px;color:v
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
 @media (max-width:780px){.hero{grid-template-columns:1fr;min-height:auto}.orb{display:none}.pn.on{grid-template-columns:1fr}section{padding-top:68px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.rv,h1 span{opacity:1;transform:none}#cd,#cr{display:none!important}}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:55;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.mq{overflow:hidden;margin-top:48px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}.mq div{display:flex;gap:44px;width:max-content;animation:mq 34s linear infinite;font:12px ui-monospace,monospace;color:var(--mu);letter-spacing:.14em;text-transform:uppercase}@keyframes mq{to{transform:translateX(-50%)}}
+.card,.btn{will-change:transform}.card{transition:border-color .3s,transform .2s ease-out}
+@media print{#gl,header,#cd,#cr,#pg,#ld,.mq,#lab,#ask,#map,#contact form,#cp,body::after{display:none!important}body{background:#fff}*{color:#000!important;background:transparent!important;border-color:#bbb!important}.rv,h1 span{opacity:1!important;transform:none!important}section{padding-top:28px}.hero{min-height:0}}
 </style></head><body class="hc">
 <div id="ld"><div><span>Shivani Poojary</span><i></i></div></div><div id="pg"></div><div id="cd"></div><div id="cr"></div><canvas id="gl" aria-hidden="true"></canvas>
 <header><nav aria-label="Primary"><b>SP</b><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#map">Map</a><a href="#ask">Ask</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a><button class="ib" id="k" aria-label="Open command menu">Ctrl K</button><button class="ib" id="th" aria-label="Change theme">Theme: <span id="tn"></span></button></nav></header>
 <main>
-<section class="hero"><div><div class="ey">Finance & Analytics ·India</div><h1 aria-label="Shivani Poojary" id="h1"></h1><p class="role" id="rl"></p>
+<section class="hero"><div><div class="ey">Finance & Analytics · India</div><h1 aria-label="Shivani Poojary" id="h1"></h1><p class="role" id="rl"></p>
 <p class="lead">MBA graduate who turns loan files, option positions and survey data into decisions, with a record of leading people-centred community work.</p>
-<div class="btns"><a class="btn p" href="#lab">Try the finance lab</a><a class="btn" href="#projects">Projects</a><a class="btn" href="mailto:shivani12pvt@gmail.com?subject=Resume%20request">Request resume</a></div></div>
+<div class="btns"><a class="btn p" href="#lab">Try the finance lab</a><a class="btn" href="#projects">Projects</a><a class="btn" href="mailto:shivani12pvt@gmail.com?subject=Resume%20request">Request resume</a><button class="btn" id="pr">Save page as PDF</button></div></div>
 <div class="orb" role="img" aria-label="Portrait placeholder"><em>portrait<br>placeholder</em></div></section>
 <div class="stats rv"><div><b data-c="28" data-s="%">0</b><small>improvement in loan processing accuracy and turnaround (internship, self-reported)</small></div><div><b data-c="182">0</b><small>survey responses analysed in SPSS</small></div><div><b data-c="20">0</b><small>NIFTY 50 stocks in options analysis</small></div><div><b data-c="12">0</b><small>volunteers led on a beach clean-up</small></div></div>
-
+<div class="mq" aria-hidden="true"><div id="mqd"></div></div>
 <section id="about" class="ab rv"><div class="ey">About</div><h2>Rigour with the people behind the numbers</h2>
 <p>I’m an MBA graduate in Finance and Analytics. My hands-on work so far sits in two places: assessing auto-loan applications at Kanchana Hyundai, and valuing equity and index options on NIFTY 50 stocks.</p>
 <p>I enjoy problems where documentation, affordability and risk must be reconciled into a clear call, and where a statistical test can settle what intuition only suggests. I have also led teams in community and CSR programmes.</p></section>
@@ -122,7 +126,7 @@ form{display:grid;gap:12px;max-width:560px}footer{padding:70px 24px 50px;color:v
 <section id="contact" class="rv"><div class="ey">Contact</div><h2>Let’s talk</h2><p style="color:var(--mu);max-width:560px">Open to finance and analytics roles. The form opens your email app with the message prefilled.</p>
 <form id="f"><input id="n" required placeholder="Your name" aria-label="Your name"><input id="e" type="email" required placeholder="Your email" aria-label="Your email"><select id="t" aria-label="Enquiry type"><option>Employment opportunity</option><option>Collaboration</option><option>General enquiry</option></select><textarea id="m" rows="5" required placeholder="Message" aria-label="Message"></textarea><button class="btn p" type="submit">Send via email</button></form>
 <div class="btns"><a class="btn" href="https://www.linkedin.com/in/shivanisp12" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="mailto:shivani12pvt@gmail.com">shivani12pvt@gmail.com</a></div></section>
-</main><footer>© 2026 Shivani Poojary · Karnataka, India</footer>
+</main><footer>© 2026 Shivani Poojary · India</footer>
 <div id="cp" role="dialog" aria-label="Command menu"><div><input id="ci" placeholder="Jump to a section, change theme…" aria-label="Search commands"><div id="cl"></div></div></div>
 <script>
 var $=function(s){return document.querySelector(s)},$$=function(s){return[].slice.call(document.querySelectorAll(s))},RM=matchMedia('(prefers-reduced-motion:reduce)').matches,R=document.documentElement;
@@ -185,13 +189,13 @@ function h2r(h){h=h.replace('#','');return[0,2,4].map(function(i){return parseIn
 function uc(){cc=[h2r(cv('--ac')),h2r(cv('--ac2')),h2r(cv('--bg'))]}
 if(gx){var vs=gx.createShader(gx.VERTEX_SHADER),fs=gx.createShader(gx.FRAGMENT_SHADER),pr=gx.createProgram();
 gx.shaderSource(vs,'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}');
-gx.shaderSource(fs,'precision mediump float;uniform vec2 r,m;uniform float t;uniform vec3 a,b,k;void main(){vec2 u=gl_FragCoord.xy/r,s=vec2(r.x/r.y,1.);vec2 q=u*s*3.;float v=sin(q.x+sin(q.y*1.3+t*.4))+sin(q.y*1.1+cos(q.x*.9-t*.3))+sin((q.x+q.y)*.7+t*.2);v=v/6.+.5;float d=distance(u*s,m*s);vec3 c=mix(k,mix(a,b,u.x),smoothstep(.5,1.,v)*.2+exp(-d*5.)*.2);gl_FragColor=vec4(c,1.);}');
+gx.shaderSource(fs,'#ifdef GL_FRAGMENT_PRECISION_HIGH\nprecision highp float;\n#else\nprecision mediump float;\n#endif\nuniform vec2 r,m;uniform float t,y;uniform vec3 a,b,k;float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}float fb(vec2 p){float v=0.,A=.5;for(int i=0;i<5;i++){v+=A*n(p);p=p*2.02+vec2(1.7,9.2);A*=.5;}return v;}void main(){vec2 s=vec2(r.x/r.y,1.),uv=gl_FragCoord.xy/r,u=uv*s;vec2 q=u*2.2+vec2(0.,y);float w=fb(q+t*.05);float f=fb(q+3.*w+vec2(t*.08,-t*.06));float d=distance(u,m*s);f+=exp(-d*6.)*.18;float l=smoothstep(.42,.9,f);vec3 c=mix(k,mix(a,b,clamp(w+uv.x*.3,0.,1.)),l*.3);c+=a*exp(-d*7.)*.08;float vg=smoothstep(1.3,.2,distance(uv,vec2(.5)));c=mix(k,c,vg*.6+.4);gl_FragColor=vec4(c,1.);}');
 gx.compileShader(vs);gx.compileShader(fs);gx.attachShader(pr,vs);gx.attachShader(pr,fs);gx.linkProgram(pr);gx.useProgram(pr);
 var bf=gx.createBuffer();gx.bindBuffer(gx.ARRAY_BUFFER,bf);gx.bufferData(gx.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gx.STATIC_DRAW);var pl=gx.getAttribLocation(pr,'p');gx.enableVertexAttribArray(pl);gx.vertexAttribPointer(pl,2,gx.FLOAT,false,0,0);
-U={};['r','m','t','a','b','k'].forEach(function(n){U[n]=gx.getUniformLocation(pr,n)});
+U={};['r','m','t','y','a','b','k'].forEach(function(n){U[n]=gx.getUniformLocation(pr,n)});
 function rs(){g.width=innerWidth/2;g.height=innerHeight/2;gx.viewport(0,0,g.width,g.height)}addEventListener('resize',rs);rs();
 var ms=[.5,.5],sm=[.5,.5];addEventListener('pointermove',function(e){ms=[e.clientX/innerWidth,1-e.clientY/innerHeight]});
-(function d(n){if(!document.hidden){sm[0]+=(ms[0]-sm[0])*.06;sm[1]+=(ms[1]-sm[1])*.06;gx.uniform2f(U.r,g.width,g.height);gx.uniform2f(U.m,sm[0],sm[1]);gx.uniform1f(U.t,RM?2:n/1000);gx.uniform3fv(U.a,cc[0]);gx.uniform3fv(U.b,cc[1]);gx.uniform3fv(U.k,cc[2]);gx.drawArrays(gx.TRIANGLES,0,3)}if(!RM)requestAnimationFrame(d);else setTimeout(function(){d(0)},400)})(0)}
+(function d(n){if(!document.hidden){sm[0]+=(ms[0]-sm[0])*.06;sm[1]+=(ms[1]-sm[1])*.06;gx.uniform2f(U.r,g.width,g.height);gx.uniform2f(U.m,sm[0],sm[1]);gx.uniform1f(U.t,RM?2:n/1000);gx.uniform1f(U.y,RM?0:scrollY/innerHeight*.35);gx.uniform3fv(U.a,cc[0]);gx.uniform3fv(U.b,cc[1]);gx.uniform3fv(U.k,cc[2]);gx.drawArrays(gx.TRIANGLES,0,3)}if(!RM)requestAnimationFrame(d);else setTimeout(function(){d(0)},400)})(0)}
 
 /* monte carlo */
 function gz(){var u=1-Math.random(),v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(6.2832*v)}
@@ -213,5 +217,13 @@ Object.keys(N0).forEach(function(k){var n=N0[k],g=mk('g',{tabindex:0,style:'curs
 function on(){var c={};c[k]=1;ln.forEach(function(l){var h=l[0].indexOf(k)>-1;if(h){c[l[0][0]]=1;c[l[0][1]]=1}l[1].setAttribute('stroke',h?'var(--ac)':'var(--bd)')});for(var q in el)el[q].style.opacity=c[q]?1:.25}
 function off(){ln.forEach(function(l){l[1].setAttribute('stroke','var(--bd)')});for(var q in el)el[q].style.opacity=1}
 g.addEventListener('pointerenter',on);g.addEventListener('focus',on);g.addEventListener('pointerleave',off);g.addEventListener('blur',off)})})();
+/* pro polish */
+(function(){var T=['Advanced Excel','SQL','Python','SPSS','Tableau','Power BI','Black-Scholes','Credit risk','Hypothesis testing','Financial modeling'],m=$('#mqd');T.concat(T).forEach(function(t){var e=document.createElement('span');e.textContent=t;m.appendChild(e)});
+$('#pr').onclick=function(){print()};
+if(!RM&&matchMedia('(pointer:fine)').matches){$$('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;if(b.height<420)c.style.transform='perspective(1000px) rotateX('+(-y*4)+'deg) rotateY('+(x*4)+'deg)'});c.addEventListener('pointerleave',function(){c.style.transform=''})});
+$$('.btn').forEach(function(b){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+(e.clientX-r.left-r.width/2)*.18+'px,'+(e.clientY-r.top-r.height/2)*.3+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})})}
+var CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';window.sc=function(h){var o=h.textContent,k=0;h.setAttribute('aria-label',o);var iv=setInterval(function(){k+=.7;h.textContent=o.split('').map(function(c,i){return c==' '||i<k?c:CH[Math.floor(Math.random()*36)]}).join('');if(k>=o.length){clearInterval(iv);h.textContent=o}},28)};
+if(!RM){var oo=new IntersectionObserver(function(r){r.forEach(function(i){if(i.isIntersecting){sc(i.target);oo.unobserve(i.target)}})},{threshold:.6});$$('section h2').forEach(function(h){oo.observe(h)})}
+addEventListener('keydown',function(e){if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)||e.ctrlKey||e.metaKey)return;var S=$$('section[id]'),c=0;S.forEach(function(x,i){if(x.getBoundingClientRect().top<innerHeight*.4)c=i});if(e.key=='j')S[Math.min(S.length-1,c+1)].scrollIntoView();if(e.key=='k')S[Math.max(0,c-1)].scrollIntoView()})})();
 sT(cur);pf();
 </script></body></html>
