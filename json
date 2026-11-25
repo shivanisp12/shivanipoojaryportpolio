@@ -1,0 +1,181 @@
+[
+ {
+  "k": [
+   "hello",
+   "hey",
+   "hi"
+  ],
+  "a": "Hi, great to meet you. Ask me about my experience, projects, skills or education, or say “take the tour”.",
+  "nav": null
+ },
+ {
+  "k": [
+   "who",
+   "about you",
+   "yourself",
+   "introduce",
+   "background",
+   "summary"
+  ],
+  "a": "I’m Shivani Poojary, an MBA graduate in Finance and Analytics based in Udupi, Karnataka. My hands-on work so far is in credit risk assessment, options valuation and statistical analysis.",
+  "nav": "#about"
+ },
+ {
+  "k": [
+   "experience",
+   "intern",
+   "kanchana",
+   "hyundai",
+   "job",
+   "career",
+   "loan",
+   "credit",
+   "28"
+  ],
+  "a": "In June and July 2025 I was a Finance Intern at Kanchana Hyundai. I verified loan documents, assessed auto loan applications averaging 7 lakh rupees, compared terms across partner banks, tracked approval trends in Excel, and reported a 28% improvement in processing accuracy and approval turnaround.",
+  "nav": "#experience"
+ },
+ {
+  "k": [
+   "skill",
+   "tool",
+   "excel",
+   "sql",
+   "python",
+   "spss",
+   "tableau",
+   "power bi",
+   "technical",
+   "software",
+   "expertise",
+   "analytics"
+  ],
+  "a": "My toolkit includes advanced Excel, SQL, Python, SPSS, Tableau, Power BI and Google Analytics. The work I can point to is Excel and SPSS in my projects, and Black-Scholes pricing in my options study. My finance skills cover financial modeling, credit and financial risk, and derivatives pricing.",
+  "nav": "#skills"
+ },
+ {
+  "k": [
+   "project",
+   "options",
+   "black",
+   "nifty",
+   "survey",
+   "customer",
+   "derivative",
+   "case study",
+   "regression"
+  ],
+  "a": "I have two academic projects. One values equity and index options across the top 20 NIFTY 50 stocks with mark-to-market analysis and Black-Scholes pricing. The other analyses 182 survey responses with regression and hypothesis testing in SPSS to find what drives customer satisfaction.",
+  "nav": "#projects"
+ },
+ {
+  "k": [
+   "education",
+   "study",
+   "mba",
+   "degree",
+   "college",
+   "university",
+   "certif",
+   "mckinsey",
+   "qualif",
+   "school"
+  ],
+  "a": "I have an MBA in Finance and Analytics from St Aloysius Institute of Management and Information Technology, and a Bachelor of Commerce from Mahatma Gandhi Memorial College. My certifications include the McKinsey Forward Program, SPSS for Data Analysis, and a Business Management certification from Santa Clara University through Infosys Springboard.",
+  "nav": "#education"
+ },
+ {
+  "k": [
+   "lead",
+   "csr",
+   "volunteer",
+   "village",
+   "beach",
+   "community",
+   "speech",
+   "achievement",
+   "award",
+   "class rep"
+  ],
+  "a": "I led a six-member team for five days in Agadi village, Karnataka, and led 12 volunteers on a beach clean-up drive. I also placed third in an intercollegiate speech competition and served as class representative and event coordinator.",
+  "nav": "#leadership"
+ },
+ {
+  "k": [
+   "language",
+   "speak",
+   "hindi",
+   "kannada",
+   "german",
+   "korean",
+   "japanese",
+   "mandarin"
+  ],
+  "a": "I speak English, Kannada and Hindi. I also have Mandarin at HSK 1 level, and basic German, Korean and Japanese.",
+  "nav": null
+ },
+ {
+  "k": [
+   "where",
+   "location",
+   "based",
+   "live",
+   "city"
+  ],
+  "a": "I’m based in Udupi, Karnataka, India.",
+  "nav": null
+ },
+ {
+  "k": [
+   "contact",
+   "email",
+   "reach",
+   "hire",
+   "linkedin",
+   "connect",
+   "available",
+   "opportunit",
+   "roles",
+   "looking"
+  ],
+  "a": "I’m open to finance and analytics roles. You can reach me at shivani12pvt@gmail.com or on LinkedIn at linkedin.com/in/shivanisp12.",
+  "nav": "#contact"
+ },
+ {
+  "k": [
+   "philosophy",
+   "approach",
+   "interest",
+   "hobby",
+   "hobbies",
+   "passion",
+   "vision",
+   "future",
+   "goal",
+   "testimonial",
+   "salary"
+  ],
+  "a": "I haven’t added that to my verified profile yet, so I won’t guess. I can tell you about my experience, projects, skills, education and leadership.",
+  "nav": null
+ },
+ {
+  "k": [],
+  "a": "Strengths evidenced in the record: documentation verification and compliance checking; credit and affordability assessment; derivatives pricing with Black-Scholes; statistical testing with regression and hypothesis tests in SPSS; Excel modeling and revenue projections; cross-functional coordination with sales, marketing, operations and partner banks; and team leadership in community and CSR work.",
+  "nav": null
+ },
+ {
+  "k": [],
+  "a": "What is distinctive in the record: she combines finance and analytics training with hands-on loan-assessment experience, options-pricing coursework, and repeated leadership of volunteer and community teams; she also speaks several languages (English, Kannada, Hindi, Mandarin at HSK 1, and basic German, Korean and Japanese).",
+  "nav": null
+ },
+ {
+  "k": [],
+  "a": "Only one work experience is on record: a two-month finance internship (June to July 2025). Projects are academic. No awards other than third place in an intercollegiate speech competition are on record. No testimonials, publications or personal hobbies are on record.",
+  "nav": null
+ },
+ {
+  "k": [],
+  "a": "This portfolio website includes interactive finance tools (an options payoff and Black-Scholes calculator, an auto-loan EMI affordability calculator and a Monte Carlo simulation). They are illustrative teaching tools, not results from her projects.",
+  "nav": null
+ }
+]
