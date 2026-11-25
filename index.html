@@ -76,6 +76,7 @@ body:not(.docked){overflow:hidden;height:100vh}body:not(.docked) header,body:not
 header{top:auto;bottom:0;left:0;right:0;width:auto;height:46px}nav{flex-direction:row;overflow-x:auto;justify-content:flex-start;gap:18px;padding:0 16px;white-space:nowrap}nav b,nav .ib{display:none}nav a{writing-mode:horizontal-tb;transform:none}
 #dock{bottom:62px}.big{top:7vh;transform:none;font-size:21vw}.vt{display:none}#sb{--w:min(92vw,44vh);left:calc(50% - var(--w)/2);top:15vh;bottom:auto}.stx{right:4vw;left:4vw;top:auto;bottom:2vh;transform:none;width:auto;max-height:40vh}.subs{font-size:15px;min-height:44px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.rv,.big span{opacity:1!important;transform:none!important}.kt .ch{opacity:1!important}#cd,#cr{display:none!important}}
+.out b.sm{font-size:17px;line-height:1.25}#pml{display:grid;gap:0}#pml[hidden]{display:none}.mailnote{display:none}
 </style></head><body class="hc">
 <div id="ld"><div><span>Shivani Poojary</span><i></i></div></div>
 <div id="stage" role="dialog" aria-label="Interactive avatar introduction"><canvas id="art" aria-hidden="true"></canvas>
@@ -84,7 +85,7 @@ header{top:auto;bottom:0;left:0;right:0;width:auto;height:46px}nav{flex-directio
 <div class="stx"><div class="ey">01 — Meet</div><p class="subs" id="avc" aria-live="polite">An MBA graduate in finance and analytics. Press “Meet Shivani” for a spoken introduction, or ask me a question.</p>
 <div class="btns" style="margin:0"><button class="btn p" id="enter">▶ Meet Shivani</button><button class="btn" id="skip">Enter the exhibition</button></div>
 <div id="chat"><div id="cl2" role="log" aria-live="polite"></div><div class="chips" id="sg"></div><form id="cf"><input id="cq" placeholder="Ask about my work…" aria-label="Ask a question" maxlength="300" autocomplete="off"><button type="button" class="ib" id="mic" aria-label="Ask by voice">🎤 Voice</button><button class="ib" type="submit">Ask</button></form>
-<div class="tools"><button class="ib" id="tour">▶ Guided tour</button><button class="ib" id="avp">❚❚ Pause</button><button class="ib" id="avx">■ Stop</button><button class="ib" id="avm" aria-pressed="false">🔊 Mute</button><input type="range" id="vol" min="0" max="1" step=".1" value="1" aria-label="Volume" style="width:80px;margin:0"><button class="ib" id="avcc" aria-pressed="true">CC</button><select id="avv" aria-label="Voice"></select><button class="ib" id="avr">● Record clip</button><label class="ib" for="avf" tabindex="0">Upload clip</label><input type="file" id="avf" accept="audio/*" hidden></div><audio id="ava" controls style="display:none;width:100%;margin-top:8px"></audio><p id="avn" style="font:12px/1.5 ui-monospace,monospace;color:var(--mu);margin:8px 0 0"></p></div></div></div></div>
+<div class="tools"><button class="ib" id="tour">▶ Guided tour</button><button class="ib" id="avp">❚❚ Pause</button><button class="ib" id="avx">■ Stop</button><button class="ib" id="rst">↺ New chat</button><button class="ib" id="avm" aria-pressed="false">🔊 Mute</button><input type="range" id="vol" min="0" max="1" step=".1" value="1" aria-label="Volume" style="width:80px;margin:0"><button class="ib" id="avcc" aria-pressed="true">CC</button><select id="avv" aria-label="Voice"></select><button class="ib" id="avr">● Record clip</button><label class="ib" for="avf" tabindex="0">Upload clip</label><input type="file" id="avf" accept="audio/*" hidden></div><audio id="ava" controls style="display:none;width:100%;margin-top:8px"></audio><p id="ais" class="note" style="margin:8px 0 0"></p><p id="avn" style="font:12px/1.5 ui-monospace,monospace;color:var(--mu);margin:8px 0 0"></p></div></div></div></div>
 <div id="dock"><div id="dp" hidden></div><button id="dk" aria-label="Open assistant"><canvas id="dkc" width="160" height="160"></canvas></button></div>
 
 <div id="pg"></div><div id="cd"></div><div id="cr"></div><canvas id="gl" aria-hidden="true"></canvas>
@@ -119,15 +120,27 @@ header{top:auto;bottom:0;left:0;right:0;width:auto;height:46px}nav{flex-directio
 <div class="gw"><canvas class="gen" id="g2" aria-label="Animated scatter plot with a fitted regression line"></canvas><p class="cap2">Illustrative scatter · 182 random points · not survey data</p></div></div></section>
 <section id="lab" class="night rv"><div class="num" aria-hidden="true">06</div><div class="ey">06 — Laboratory</div><h2 class="kt giant">Try the<br><em>instruments.</em></h2>
 <div class="card"><div class="tabs" role="tablist"><button class="ib on" role="tab" data-p="p1">Options payoff</button><button class="ib" role="tab" data-p="p2">Auto-loan affordability</button><button class="ib" role="tab" data-p="p3">Monte Carlo</button></div>
-<div class="pn on" id="p1"><div><label>Strategy<select id="st"><option value="lc">Long call</option><option value="lp">Long put</option><option value="sd">Long straddle (call + put)</option></select></label>
-<label>Spot<input id="S" type="number" value="100" step="any"></label><label>Strike<input id="K" type="number" value="100" step="any"></label><label>Days to expiry<input id="T" type="number" value="90" step="any"></label><label>Risk-free rate (%)<input id="R" type="number" value="6.5" step="any"></label><label>Volatility (%)<input id="V" type="number" value="20" step="any"></label></div>
-<div class="out"><div><small>Call premium</small><b id="c">–</b></div><div><small>Put premium</small><b id="p">–</b></div><div><small>Call delta</small><b id="dc">–</b></div><div><small>Put delta</small><b id="dp">–</b></div><div style="grid-column:1/-1"><small>Breakeven at expiry</small><b id="be" style="font-size:20px">–</b></div></div>
-<canvas id="pf" aria-label="Expiry profit and loss chart"></canvas><p class="note">Illustrative European-option pricer (Black-Scholes, no dividends, per share). Inputs are placeholders, not results from the academic project.</p></div>
+<div class="pn on" id="p1"><div>
+<label>Position<select id="st"><option value="lc">Long call (buy)</option><option value="sc">Short call (sell)</option><option value="lp">Long put (buy)</option><option value="sp">Short put (sell)</option><option value="ls">Long straddle</option><option value="ss">Short straddle</option></select></label>
+<label>Spot price (S)<input id="S" type="number" value="100" step="any" inputmode="decimal"></label><label>Strike price (K)<input id="K" type="number" value="100" step="any" inputmode="decimal"></label>
+<label>Days to expiry<input id="T" type="number" value="90" step="any" inputmode="decimal"></label><label>Risk-free rate (% p.a.)<input id="R" type="number" value="6.5" step="any" inputmode="decimal"></label>
+<label>Volatility (% p.a.)<input id="V" type="number" value="20" step="any" inputmode="decimal"></label>
+<label>Premium paid or received<select id="pm"><option value="bs">Theoretical (Black-Scholes)</option><option value="man">Enter manually</option></select></label>
+<div id="pml" hidden><label>Call premium<input id="PC" type="number" value="5" step="any"></label><label>Put premium<input id="PP" type="number" value="5" step="any"></label></div></div>
+<div class="out"><div><small>Call price</small><b id="c">–</b></div><div><small>Put price</small><b id="p">–</b></div>
+<div><small>Call intrinsic / time value</small><b id="cit" class="sm">–</b></div><div><small>Put intrinsic / time value</small><b id="pit" class="sm">–</b></div>
+<div><small>Call / put delta</small><b id="dl" class="sm">–</b></div><div><small>Net premium</small><b id="np" class="sm">–</b></div>
+<div><small>Breakeven at expiry</small><b id="be" class="sm">–</b></div><div><small>P&amp;L if price stays at S</small><b id="atS" class="sm">–</b></div>
+<div><small>Max profit</small><b id="mpf" class="sm">–</b></div><div><small>Max loss</small><b id="mlf" class="sm">–</b></div></div>
+<p id="oerr" class="note" role="alert" style="color:var(--ac)"></p>
+<canvas id="pf" role="img" aria-label="Expiry profit and loss chart"></canvas>
+<p class="note">Theoretical European-option model (Black-Scholes, no dividends, ACT/365 time). Every input is hypothetical: this is not live market data and not a result from the academic project. Payoffs are per unit at expiry and ignore fees, taxes and margin. A European put can have negative time value.</p></div>
 <div class="pn" id="p2"><div><label>Loan amount (₹)<input id="LA" type="number" value="700000" step="any"></label><label>Interest rate (% p.a.)<input id="LR" type="number" value="9" step="any"></label><label>Tenure (years)<input id="LY" type="number" value="5" step="any"></label><label>Applicant monthly income (₹)<input id="LI" type="number" value="60000" step="any"></label></div>
 <div class="out"><div><small>Monthly EMI</small><b id="em">–</b></div><div><small>Total interest</small><b id="ti">–</b></div><div><small>EMI / income</small><b id="ei">–</b></div><div><small>Flag</small><b id="fl" style="font-size:18px">–</b></div></div>
-<p class="note">Illustrative only. The ₹7 lakh default echoes the average loan size from the internship; income is a placeholder. The 30% / 45% flag bands are a generic rule of thumb, not any lender’s policy.</p></div>
-<div class="pn" id="p3"><div><button class="btn p" id="mc">Run simulation</button><p class="note" style="margin-top:14px">Simulates 2,000 risk-neutral price paths (geometric Brownian motion) using the spot, strike, days, rate and volatility from the Options payoff tab, then compares the Monte Carlo call price with Black-Scholes. Estimates vary slightly each run.</p></div>
-<div class="out"><div><small>Monte Carlo call</small><b id="mcc">–</b></div><div><small>Black-Scholes call</small><b id="mcb">–</b></div><div style="grid-column:1/-1"><small>Paths finishing in the money</small><b id="mci">–</b></div></div><canvas id="mp" aria-label="Simulated price paths"></canvas></div></div></section>
+<p id="lerr" class="note" role="alert" style="color:var(--ac)"></p><p class="note">Illustrative only. The ₹7 lakh default echoes the average loan size from the internship; income is a placeholder. The 30% / 45% flag bands are a generic rule of thumb, not any lender’s policy.</p></div>
+<div class="pn" id="p3"><div><button class="btn p" id="mc">Run simulation</button><p class="note" style="margin-top:14px">Monte Carlo under risk-neutral geometric Brownian motion, using the inputs from the Options tab: 20,000 antithetic samples estimate the option prices, and 60 of 2,000 illustrative paths are drawn. The estimate is compared with Black-Scholes and its standard error (SE).</p></div>
+<div class="out"><div><small>Monte Carlo call ± SE</small><b id="mcc" class="sm">–</b></div><div><small>Black-Scholes call</small><b id="mcb" class="sm">–</b></div><div><small>Monte Carlo put ± SE</small><b id="mcp" class="sm">–</b></div><div><small>Black-Scholes put</small><b id="mcq" class="sm">–</b></div><div><small>P(S at expiry &gt; K)</small><b id="mci" class="sm">–</b></div><div><small>Call z-score vs BS</small><b id="mcz" class="sm">–</b></div></div>
+<p id="merr" class="note" role="alert" style="color:var(--ac)"></p><canvas id="mp" role="img" aria-label="Simulated price paths"></canvas></div></div></section>
 <section id="credentials" class="ivory rv"><div class="num" aria-hidden="true">07</div><div class="ey">07 — Credentials &amp; leadership</div>
 <h2 class="kt giant">Beyond the<br><em>spreadsheet.</em></h2><div style="margin-top:8vh" id="leadership">
 <div class="stat"><b>6</b><p>Led a six-member team for five days in Agadi village, Karnataka: taught 30–35 Anganwadi children, ran health, scheme and financial literacy sessions for about 70 villagers, and submitted an infrastructure letter to the panchayat that led to cleanliness work and women’s business support.</p></div>
@@ -137,9 +150,9 @@ header{top:auto;bottom:0;left:0;right:0;width:auto;height:46px}nav{flex-directio
 <div><h3>Certifications</h3><ul><li><b>McKinsey Forward Program</b></li><li><b>SPSS for Data Analysis</b></li><li><b>Business Management</b>Santa Clara University, via Infosys Springboard</li></ul></div></div></section>
 
 <section id="contact" class="night rv"><div class="num" aria-hidden="true">08</div><div class="ey">08 — Contact</div>
-<h2 class="kt giant">Let’s<br><em>talk.</em></h2><a class="mail" href="mailto:shivani12pvt@gmail.com">shivani12pvt@gmail.com</a>
-<form id="f"><input id="n" required placeholder="Your name" aria-label="Your name"><input id="e" type="email" required placeholder="Your email" aria-label="Your email"><select id="t" aria-label="Enquiry type"><option>Employment opportunity</option><option>Collaboration</option><option>General enquiry</option></select><textarea id="m" rows="4" required placeholder="Message" aria-label="Message"></textarea><button class="btn p" type="submit">Send via email</button></form>
-<div class="btns"><a class="btn" href="https://www.linkedin.com/in/shivanisp12" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></section>
+<h2 class="kt giant">Let’s<br><em>talk.</em></h2><a class="mail" href="mailto:shivani12pvt@gmail.com" target="_blank" rel="noopener">shivani12pvt@gmail.com</a>
+<form id="f" novalidate><input id="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0"><input id="n" required placeholder="Your name" aria-label="Your name" autocomplete="name"><input id="e" type="email" required placeholder="Your email" aria-label="Your email" autocomplete="email"><select id="t" aria-label="Enquiry type"><option>Employment opportunity</option><option>Collaboration</option><option>General enquiry</option></select><textarea id="m" rows="4" required placeholder="Message (at least 10 characters)" aria-label="Message"></textarea><button class="btn p" type="submit">Send message</button><p id="fs" class="note" role="status" aria-live="polite" style="min-height:1.4em"></p></form>
+<div class="btns"><button type="button" class="btn" id="fcopy" hidden>Copy message</button><a class="btn" href="https://www.linkedin.com/in/shivanisp12" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></section>
 </main><footer>© 2026 Shivani Poojary · Udupi, Karnataka, India · The form opens your email app; no data is stored.</footer>
 <div id="cp" role="dialog" aria-label="Command menu"><div><input id="ci" placeholder="Jump to a chapter…" aria-label="Search commands"><div id="cl"></div></div></div>
 <script>
@@ -154,29 +167,73 @@ var cd=$('#cd'),cr=$('#cr'),mx=innerWidth/2,my=innerHeight/2,rx=0,ry=0;
 addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;cd.style.transform='translate('+mx+'px,'+my+'px)';cr.classList.toggle('h',!!(e.target.closest&&e.target.closest('a,button,summary,input,select,textarea')))});
 (function l(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;cr.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(l)})();
 /* finance */
-function N(x){var t=1/(1+.2316419*Math.abs(x)),p=.3989423*Math.exp(-x*x/2)*t*(.3193815+t*(-.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return x>0?1-p:p}
-function bsv(S,K,T,r,v){var d1=(Math.log(S/K)+(r+v*v/2)*T)/(v*Math.sqrt(T)),d2=d1-v*Math.sqrt(T),e=Math.exp(-r*T);return{c:S*N(d1)-K*e*N(d2),p:K*e*N(-d2)-S*N(-d1),dc:N(d1),dp:N(d1)-1}}
+var OPT=(function(){
+function ncdf(x){var ax=Math.abs(x),c,b,e;if(ax>37)c=0;else{e=Math.exp(-ax*ax/2);if(ax<7.07106781186547){b=3.52624965998911e-2*ax+.700383064443688;b=b*ax+6.37396220353165;b=b*ax+33.912866078383;b=b*ax+112.079291497871;b=b*ax+221.213596169931;b=b*ax+220.206867912376;c=e*b;b=8.83883476483184e-2*ax+1.75566716318264;b=b*ax+16.064177579207;b=b*ax+86.7807322029461;b=b*ax+296.564248779674;b=b*ax+637.333633378831;b=b*ax+793.826512519948;b=b*ax+440.413735824752;c=c/b}else{b=ax+.65;b=ax+4/b;b=ax+3/b;b=ax+2/b;b=ax+1/b;c=e/b/2.506628274631}}return x>0?1-c:c}
+function bs(S,K,T,r,v){var df=Math.exp(-r*T);if(T<=0)return{c:Math.max(S-K,0),p:Math.max(K-S,0),dc:S>K?1:0,dp:S<K?-1:0};
+if(v<=0){var f=S-K*df;return{c:Math.max(f,0),p:Math.max(-f,0),dc:f>0?1:0,dp:f>0?0:-1}}
+var sq=v*Math.sqrt(T),d1=(Math.log(S/K)+(r+v*v/2)*T)/sq,d2=d1-sq;return{c:S*ncdf(d1)-K*df*ncdf(d2),p:K*df*ncdf(-d2)-S*ncdf(-d1),dc:ncdf(d1),dp:ncdf(d1)-1}}
+function intr(t,S,K){return t==='c'?Math.max(S-K,0):Math.max(K-S,0)}
+var POS={lc:[['c',1]],sc:[['c',-1]],lp:[['p',1]],sp:[['p',-1]],ls:[['c',1],['p',1]],ss:[['c',-1],['p',-1]]},NAME={lc:'Long call',sc:'Short call',lp:'Long put',sp:'Short put',ls:'Long straddle',ss:'Short straddle'};
+function pnl(pos,S,K,pc,pp){var s=0;POS[pos].forEach(function(l){s+=l[0]==='c'&&l[1]>0?Math.max(S-K,0)-pc:l[0]==='c'?pc-Math.max(S-K,0):l[1]>0?Math.max(K-S,0)-pp:pp-Math.max(K-S,0)});return s}
+function info(pos,K,pc,pp){var be=[],net=0,mp,ml;
+switch(pos){case'lc':be=[K+pc];mp='Unlimited';ml=pc;break;case'sc':be=[K+pc];mp=pc;ml='Unlimited';break;
+case'lp':be=[K-pp];mp=K-pp;ml=pp;break;case'sp':be=[K-pp];mp=pp;ml=K-pp;break;
+case'ls':be=[K-pc-pp,K+pc+pp];mp='Unlimited';ml=pc+pp;break;case'ss':be=[K-pc-pp,K+pc+pp];mp=pc+pp;ml='Unlimited';break}
+POS[pos].forEach(function(l){net+=-l[1]*(l[0]==='c'?pc:pp)});
+return{be:be.filter(function(x){return x>0}),net:net,mp:mp,ml:ml}}
+function z(v){return Math.abs(v)<5e-9?0:v}function f2(v){return z(v).toFixed(2)}function f3(v){return z(v).toFixed(3)}
+function readIn(){var spec=[['S','Spot price (S)',function(v){return v>0&&v<=1e9},'must be greater than 0'],['K','Strike price (K)',function(v){return v>0&&v<=1e9},'must be greater than 0'],['T','Days to expiry',function(v){return v>=0&&v<=36500},'must be between 0 and 36,500'],['R','Risk-free rate',function(v){return v>=-50&&v<=100},'must be between -50 and 100 (%)'],['V','Volatility',function(v){return v>=0&&v<=500},'must be between 0 and 500 (%)']],o={},i,raw,v;
+for(i=0;i<spec.length;i++){raw=$('#'+spec[i][0]).value.trim();if(raw==='')return{err:spec[i][1]+' is required.'};v=Number(raw);if(!isFinite(v)||!spec[i][2](v))return{err:spec[i][1]+' '+spec[i][3]+'.'};o[spec[i][0]]=v}
+return{S:o.S,K:o.K,T:o.T/365,r:o.R/100,v:o.V/100,days:o.T}}
+function prem(x,m){if($('#pm').value!=='man')return{pc:m.c,pp:m.p};var a=$('#PC').value.trim(),b=$('#PP').value.trim(),pc=Number(a),pp=Number(b);if(a===''||b===''||!isFinite(pc)||!isFinite(pp)||pc<0||pp<0)return{err:'Manual premiums must be numbers that are 0 or more.'};return{pc:pc,pp:pp}}
+return{ncdf:ncdf,bs:bs,pnl:pnl,info:info,intr:intr,readIn:readIn,prem:prem,f2:f2,f3:f3,z:z,NAME:NAME,POS:POS}})();
 function cv(n){return getComputedStyle(R).getPropertyValue(n).trim()}
-function pf(){var S=+$('#S').value,K=+$('#K').value,T=+$('#T').value/365,r=+$('#R').value/100,v=+$('#V').value/100,ids=['#c','#p','#dc','#dp','#be'],cn=$('#pf');
-if(!(S>0&&K>0&&T>0&&v>0)){ids.forEach(function(i){$(i).textContent='–'});cn.getContext('2d').clearRect(0,0,cn.width,cn.height);return}
-var o=bsv(S,K,T,r,v),s=$('#st').value,f=function(x){var a=Math.max(x-K,0)-o.c,b=Math.max(K-x,0)-o.p;return s=='lc'?a:s=='lp'?b:a+b};
-$('#c').textContent=o.c.toFixed(2);$('#p').textContent=o.p.toFixed(2);$('#dc').textContent=o.dc.toFixed(3);$('#dp').textContent=o.dp.toFixed(3);
-$('#be').textContent=s=='lc'?(K+o.c).toFixed(2):s=='lp'?(K-o.p).toFixed(2):(K-o.c-o.p).toFixed(2)+' and '+(K+o.c+o.p).toFixed(2);
-var d=devicePixelRatio||1,W=cn.width=cn.clientWidth*d,H=cn.height=cn.clientHeight*d,x=cn.getContext('2d'),lo=S*.6,hi=S*1.4,xs=[],ys=[];
-for(var i=0;i<=120;i++){var X=lo+(hi-lo)*i/120;xs.push(X);ys.push(f(X))}
-var mn=Math.min.apply(0,ys),mxy=Math.max.apply(0,ys),pd=(mxy-mn)*.12||1;mn-=pd;mxy+=pd;
-var px=function(X){return(X-lo)/(hi-lo)*W},py=function(Y){return H-(Y-mn)/(mxy-mn)*H};
-x.clearRect(0,0,W,H);x.lineWidth=d;x.strokeStyle=cv('--bd');x.beginPath();x.moveTo(0,py(0));x.lineTo(W,py(0));x.stroke();
-x.setLineDash([4*d,4*d]);x.beginPath();x.moveTo(px(K),0);x.lineTo(px(K),H);x.stroke();x.setLineDash([]);
-x.strokeStyle=cv('--ac');x.lineWidth=2.2*d;x.beginPath();xs.forEach(function(X,i){i?x.lineTo(px(X),py(ys[i])):x.moveTo(px(X),py(ys[i]))});x.stroke();
-x.fillStyle=cv('--mu');x.font=11*d+'px ui-monospace,monospace';x.fillText('strike '+K,px(K)+5*d,14*d);x.fillText('P&L at expiry per share',8*d,H-8*d)}
-$$('#p1 input,#p1 select').forEach(function(i){i.addEventListener('input',pf)});addEventListener('resize',pf);
-function ln(){var P=+$('#LA').value,r=+$('#LR').value/1200,n=+$('#LY').value*12,I=+$('#LI').value,ids=['#em','#ti','#ei','#fl'];
-if(!(P>0&&n>0&&r>=0&&I>0)){ids.forEach(function(i){$(i).textContent='–'});return}
-var E=r?P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1):P/n,q=E/I*100,fm=function(v){return'₹'+Math.round(v).toLocaleString('en-IN')};
+function upd(){var O=OPT,x=O.readIn(),ids=['#c','#p','#cit','#pit','#dl','#np','#be','#atS','#mpf','#mlf'],cn=$('#pf'),g=cn.getContext('2d'),d=Math.min(2,devicePixelRatio||1);
+function blank(e){$('#oerr').textContent=e;ids.forEach(function(i){$(i).textContent='–'});cn.width=cn.clientWidth*d;cn.height=cn.clientHeight*d;g.clearRect(0,0,cn.width,cn.height)}
+if(x.err){blank(x.err);return}
+var m=O.bs(x.S,x.K,x.T,x.r,x.v),pr=O.prem(x,m);if(pr.err){blank(pr.err);return}$('#oerr').textContent=x.v===0?'Volatility is 0, so prices follow the deterministic forward value.':x.T===0?'Expiry is today, so prices equal intrinsic value.':'';
+var pos=$('#st').value,inf=O.info(pos,x.K,pr.pc,pr.pp),ci=O.intr('c',x.S,x.K),pi=O.intr('p',x.S,x.K),pos2=O.pnl(pos,x.S,x.K,pr.pc,pr.pp),legs=O.POS[pos];
+$('#c').textContent=O.f2(m.c);$('#p').textContent=O.f2(m.p);$('#cit').textContent=O.f2(ci)+' / '+O.f2(m.c-ci);$('#pit').textContent=O.f2(pi)+' / '+O.f2(m.p-pi);$('#dl').textContent=O.f3(m.dc)+' / '+O.f3(m.dp);
+$('#np').textContent=(inf.net>=0?'Credit ':'Debit ')+O.f2(Math.abs(inf.net));$('#be').textContent=inf.be.length?inf.be.map(O.f2).join(' and '):'none above 0';$('#atS').textContent=O.f2(pos2);
+$('#mpf').textContent=typeof inf.mp==='number'?O.f2(inf.mp):inf.mp;$('#mlf').textContent=typeof inf.ml==='number'?O.f2(inf.ml):inf.ml;
+var W=cn.width=cn.clientWidth*d,H=cn.height=cn.clientHeight*d,lo=Math.max(0,Math.min(x.S,x.K)*.55),hi=Math.max(x.S,x.K)*1.45,N=200,xs=[],ys=[],i,mn=0,mx=0,e;
+for(i=0;i<=N;i++){e=lo+(hi-lo)*i/N;xs.push(e);ys.push(O.pnl(pos,e,x.K,pr.pc,pr.pp));}
+ys.forEach(function(v){mn=Math.min(mn,v);mx=Math.max(mx,v)});var pad=(mx-mn||1)*.14;mn-=pad;mx+=pad;
+var L=54*d,Rr=14*d,Tt=26*d,B=34*d,px=function(v){return L+(v-lo)/(hi-lo)*(W-L-Rr)},py=function(v){return Tt+(mx-v)/(mx-mn)*(H-Tt-B)},bd=cv('--bd'),mu=cv('--mu'),ac=cv('--ac'),sd=cv('--ac2'),Y0=py(0);
+g.clearRect(0,0,W,H);g.font=10*d+'px ui-monospace,monospace';g.lineWidth=d;
+function nice(a,b,n){var r=(b-a)/n,p=Math.pow(10,Math.floor(Math.log10(r))),q=r/p,s=q<1.5?1:q<3?2:q<7?5:10,st=s*p,o=[],t=Math.ceil(a/st)*st;for(;t<=b+1e-9;t+=st)o.push(t);return o}
+g.fillStyle=mu;g.strokeStyle=bd;nice(lo,hi,5).forEach(function(t){g.beginPath();g.moveTo(px(t),Tt);g.lineTo(px(t),H-B);g.stroke();g.textAlign='center';g.fillText(O.f2(t).replace(/\.00$/,''),px(t),H-B+14*d)});
+nice(mn,mx,4).forEach(function(t){g.beginPath();g.moveTo(L,py(t));g.lineTo(W-Rr,py(t));g.stroke();g.textAlign='right';g.fillText(O.f2(t).replace(/\.00$/,''),L-6*d,py(t)+3*d)});
+g.strokeStyle=mu;g.lineWidth=1.5*d;g.beginPath();g.moveTo(L,Y0);g.lineTo(W-Rr,Y0);g.stroke();
+[['rgba(80,170,110,.16)',function(){g.rect(L,Tt,W-L-Rr,Y0-Tt)}],['rgba(220,70,50,.16)',function(){g.rect(L,Y0,W-L-Rr,H-B-Y0)}]].forEach(function(p){g.save();g.beginPath();p[1]();g.clip();g.beginPath();g.moveTo(px(xs[0]),Y0);xs.forEach(function(v,k){g.lineTo(px(v),py(ys[k]))});g.lineTo(px(xs[N]),Y0);g.closePath();g.fillStyle=p[0];g.fill();g.restore()});
+g.strokeStyle=ac;g.lineWidth=2.4*d;g.beginPath();xs.forEach(function(v,k){k?g.lineTo(px(v),py(ys[k])):g.moveTo(px(v),py(ys[k]))});g.stroke();
+g.setLineDash([4*d,5*d]);g.strokeStyle=sd;g.lineWidth=d;g.beginPath();g.moveTo(px(x.K),Tt);g.lineTo(px(x.K),H-B);g.stroke();g.setLineDash([]);
+g.strokeStyle=mu;g.beginPath();g.moveTo(px(x.S),Tt);g.lineTo(px(x.S),H-B);g.stroke();g.fillStyle=sd;g.textAlign='left';g.fillText('K '+O.f2(x.K),px(x.K)+4*d,Tt+10*d);g.fillStyle=mu;g.fillText('S '+O.f2(x.S),px(x.S)+4*d,Tt+22*d);
+g.fillStyle=ac;inf.be.forEach(function(v){if(v>=lo&&v<=hi){g.beginPath();g.arc(px(v),Y0,4*d,0,6.283);g.fill();g.textAlign='center';g.fillText(O.f2(v),px(v),Y0-8*d)}});
+g.fillStyle=mu;g.textAlign='left';g.fillText(O.NAME[pos]+' · P&L per unit at expiry'+(typeof inf.mp!=='number'||typeof inf.ml!=='number'?' · tail continues off-chart':''),L,14*d);
+cn.setAttribute('aria-label',O.NAME[pos]+' payoff at expiry. Breakeven '+(inf.be.map(O.f2).join(' and ')||'none')+'. Max profit '+(typeof inf.mp==='number'?O.f2(inf.mp):inf.mp)+', max loss '+(typeof inf.ml==='number'?O.f2(inf.ml):inf.ml)+'.')}
+function pf(){upd()}
+function ln(){var P=+$('#LA').value,R2=+$('#LR').value,Y=+$('#LY').value,I=+$('#LI').value,ids=['#em','#ti','#ei','#fl'],er='';
+if(!($('#LA').value.trim()!==''&&P>0))er='Loan amount must be greater than 0.';else if(!(R2>=0&&R2<=100))er='Interest rate must be between 0 and 100.';else if(!(Y>0&&Y<=40))er='Tenure must be between 0 and 40 years.';else if(!(I>0))er='Monthly income must be greater than 0.';
+$('#lerr').textContent=er;if(er){ids.forEach(function(i){$(i).textContent='–'});return}
+var n=Math.max(1,Math.round(Y*12)),r=R2/1200,E=r?P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1):P/n,q=E/I*100,fm=function(v){return'₹'+Math.round(v).toLocaleString('en-IN')};
 $('#em').textContent=fm(E);$('#ti').textContent=fm(E*n-P);$('#ei').textContent=q.toFixed(1)+'%';$('#fl').textContent=q<=30?'Comfortable':q<=45?'Review closely':'High affordability risk'}
-$$('#p2 input').forEach(function(i){i.addEventListener('input',ln)});ln();
-$$('.tabs button').forEach(function(b){b.onclick=function(){$$('.tabs button').forEach(function(x){x.classList.toggle('on',x==b)});$$('.pn').forEach(function(p){p.classList.toggle('on',p.id==b.dataset.p)});pf()}});
+function gz(){var u=1-Math.random(),v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(6.2831853*v)}
+function mcRun(){var O=OPT,x=O.readIn(),cn=$('#mp'),g=cn.getContext('2d'),d=Math.min(2,devicePixelRatio||1),ids=['#mcc','#mcb','#mcp','#mcq','#mci','#mcz'];
+function blank(e){$('#merr').textContent=e;ids.forEach(function(i){$(i).textContent='–'})}
+if(x.err){blank(x.err);return}if(x.T<=0||x.v<=0){blank('Monte Carlo needs days to expiry above 0 and volatility above 0.');return}
+$('#merr').textContent='';var m=O.bs(x.S,x.K,x.T,x.r,x.v),np=10000,df=Math.exp(-x.r*x.T),drift=(x.r-x.v*x.v/2)*x.T,sg=x.v*Math.sqrt(x.T),i,k,zz,a,b,cs=[],ps=[],itm=0,mc=0,mp2=0,sc=0,sp2=0;
+for(i=0;i<np;i++){zz=gz();var c1=0,p1=0;for(k=-1;k<=1;k+=2){a=x.S*Math.exp(drift+sg*k*zz);c1+=Math.max(a-x.K,0)/2;p1+=Math.max(x.K-a,0)/2;if(a>x.K)itm++}cs.push(c1*df);ps.push(p1*df);mc+=c1*df;mp2+=p1*df}
+mc/=np;mp2/=np;cs.forEach(function(v){sc+=(v-mc)*(v-mc)});ps.forEach(function(v){sp2+=(v-mp2)*(v-mp2)});var sec=Math.sqrt(sc/(np-1)/np),sep=Math.sqrt(sp2/(np-1)/np);
+$('#mcc').textContent=O.f2(mc)+' ± '+O.f3(sec);$('#mcb').textContent=O.f2(m.c);$('#mcp').textContent=O.f2(mp2)+' ± '+O.f3(sep);$('#mcq').textContent=O.f2(m.p);$('#mci').textContent=(itm/(2*np)*100).toFixed(1)+'%';$('#mcz').textContent=((mc-m.c)/sec).toFixed(2)+' SE';
+var W=cn.width=cn.clientWidth*d,H=cn.height=cn.clientHeight*d,st=60,dt=x.T/st,paths=[],lo=Math.min(x.S,x.K),hi=Math.max(x.S,x.K),p,j;
+for(i=0;i<60;i++){p=x.S;var A=[p];for(j=0;j<st;j++){p*=Math.exp((x.r-x.v*x.v/2)*dt+x.v*Math.sqrt(dt)*gz());A.push(p);lo=Math.min(lo,p);hi=Math.max(hi,p)}paths.push(A)}
+var yy=function(q){return H-(q-lo)/(hi-lo||1)*H*.9-H*.05},xx=function(q){return q/st*W};g.clearRect(0,0,W,H);g.strokeStyle=cv('--ac');g.lineWidth=d;g.globalAlpha=.3;paths.forEach(function(A){g.beginPath();A.forEach(function(q,k){k?g.lineTo(xx(k),yy(q)):g.moveTo(xx(k),yy(q))});g.stroke()});
+g.globalAlpha=1;g.strokeStyle=cv('--ac2');g.setLineDash([5*d,5*d]);g.beginPath();g.moveTo(0,yy(x.K));g.lineTo(W,yy(x.K));g.stroke();g.setLineDash([]);g.fillStyle=cv('--mu');g.font=11*d+'px ui-monospace,monospace';g.fillText('strike '+O.f2(x.K)+' · 60 illustrative paths',8*d,H-8*d)}
+$$('#p1 input,#p1 select').forEach(function(i){i.addEventListener('input',upd)});$('#pm').addEventListener('change',function(){$('#pml').hidden=this.value!=='man';upd()});addEventListener('resize',upd);
+$$('#p2 input').forEach(function(i){i.addEventListener('input',ln)});ln();$('#mc').onclick=mcRun;
+$$('.tabs button').forEach(function(b){b.onclick=function(){$$('.tabs button').forEach(function(x){x.classList.toggle('on',x==b)});$$('.pn').forEach(function(p){p.classList.toggle('on',p.id==b.dataset.p)});if(b.dataset.p==='p1')upd();if(b.dataset.p==='p3')mcRun()}});
+window.OPT=OPT;window.avMC=mcRun;
 /* themes */
 var TH=['night'],cur='night';
 function sT(t){cur=t;R.dataset.theme=t;try{localStorage.setItem('th',t)}catch(e){}setTimeout(function(){uc();pf()},30)}
@@ -204,17 +261,6 @@ function rs(){g.width=innerWidth/2;g.height=innerHeight/2;gx.viewport(0,0,g.widt
 var ms=[.5,.5],sm=[.5,.5];addEventListener('pointermove',function(e){ms=[e.clientX/innerWidth,1-e.clientY/innerHeight]});
 (function d(n){if(!document.hidden){sm[0]+=(ms[0]-sm[0])*.06;sm[1]+=(ms[1]-sm[1])*.06;gx.uniform2f(U.r,g.width,g.height);gx.uniform2f(U.m,sm[0],sm[1]);gx.uniform1f(U.t,RM?2:n/1000);gx.uniform1f(U.y,RM?0:scrollY/innerHeight*.35);gx.uniform3fv(U.a,cc[0]);gx.uniform3fv(U.b,cc[1]);gx.uniform3fv(U.k,cc[2]);gx.drawArrays(gx.TRIANGLES,0,3)}if(!RM)requestAnimationFrame(d);else setTimeout(function(){d(0)},400)})(0)}
 
-/* monte carlo */
-function gz(){var u=1-Math.random(),v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(6.2832*v)}
-function mc(){var S=+$('#S').value,K=+$('#K').value,T=+$('#T').value/365,r=+$('#R').value/100,v=+$('#V').value/100,cn=$('#mp');
-if(!(S>0&&K>0&&T>0&&v>0))return;var n=2000,st=60,dt=T/st,sm=0,it=0,ps=[],d=devicePixelRatio||1,W=cn.width=cn.clientWidth*d,H=cn.height=cn.clientHeight*d,x=cn.getContext('2d'),lo=S,hi=S;
-for(var i=0;i<n;i++){var p=S,a=[p];for(var j=0;j<st;j++){p*=Math.exp((r-v*v/2)*dt+v*Math.sqrt(dt)*gz());if(i<60)a.push(p)}
-sm+=Math.max(p-K,0);if(p>K)it++;if(i<60){ps.push(a);a.forEach(function(q){lo=Math.min(lo,q,K);hi=Math.max(hi,q,K)})}}
-$('#mcc').textContent=(Math.exp(-r*T)*sm/n).toFixed(2);$('#mcb').textContent=bsv(S,K,T,r,v).c.toFixed(2);$('#mci').textContent=(it/n*100).toFixed(1)+'%';
-var px=function(j){return j/st*W},py=function(q){return H-(q-lo)/(hi-lo)*H*.9-H*.05};x.clearRect(0,0,W,H);x.strokeStyle=cv('--ac');x.lineWidth=d;x.globalAlpha=.28;
-ps.forEach(function(a){x.beginPath();a.forEach(function(q,j){j?x.lineTo(px(j),py(q)):x.moveTo(px(j),py(q))});x.stroke()});
-x.globalAlpha=1;x.strokeStyle=cv('--ac2');x.setLineDash([5*d,5*d]);x.beginPath();x.moveTo(0,py(K));x.lineTo(W,py(K));x.stroke();x.setLineDash([]);x.fillStyle=cv('--mu');x.font=11*d+'px ui-monospace,monospace';x.fillText('strike '+K+' · 60 of 2,000 paths shown',8*d,H-8*d)}
-$('#mc').onclick=mc;
 /* evidence map */
 (function(){var NS='http://www.w3.org/2000/svg',N0={mba:['MBA Finance & Analytics',100,50],int:['Kanchana Hyundai internship',100,230],opt:['Options valuation project',350,50],cus:['Customer analytics study',350,140],prc:['Derivatives & Black-Scholes',610,40],sps:['SPSS, regression, testing',610,120],xl:['Excel',610,180],cr:['Credit & affordability review',610,250]},
 E=[['mba','opt'],['mba','cus'],['opt','prc'],['cus','sps'],['cus','xl'],['int','xl'],['int','cr']],sv=$('#mg'),el={},ln=[];
@@ -265,55 +311,130 @@ x.beginPath();L.forEach(function(q,i){i?x.lineTo(q[0],q[1]):x.moveTo(q[0],q[1])}
 function dr(m,r){x.globalAlpha=1;x.clearRect(0,0,N,HH);x.drawImage(img,0,0,N,HH);if(!S0)return;if(bk>.03)eyes(bk);if(m<.02)return;var d=m*.03*N,ur=1-.3*r;warp(d,ur);x.putImageData(OUT,RX,RY);mouth(d,ur)}
 window.avDraw=function(mm,r,k){bk=k||0;dr(mm,r||0)};img.onload=function(){prep();dr(0,0)};img.src=AVIMG;
 addEventListener('pointermove',function(e){var r=sb.getBoundingClientRect();tx=Math.max(-1,Math.min(1,(e.clientX-r.left-r.width/2)/(innerWidth*.5)));ty=Math.max(-1,Math.min(1,(e.clientY-r.top-r.height/2)/(innerHeight*.5)))});
-function lp(ts){var dt=Math.min(.05,(ts-last)/1000||.016),T=0,ch=' ',ak=24;last=ts;px+=(tx-px)*.08;py+=(ty-py)*.08;
-if(aon&&AN){AN.getFloatTimeDomainData(TD);AN.getByteFrequencyData(FD);var s2=0,i,f,bw=AC.sampleRate/AN.fftSize,lo=0,mi=0,hi=0,nl=0,nm=0,nh=0;for(i=0;i<TD.length;i++)s2+=TD[i]*TD[i];var rms=Math.sqrt(s2/TD.length);
+function fin(v,d){return isFinite(v)?v:(d||0)}
+/* ---- viseme timeline: letters and digraphs -> [mouth opening, lip rounding, seconds] ---- */
+var DG=[['th',.2,0,.07],['sh',.3,.55,.08],['ch',.3,.55,.08],['ph',.12,0,.06],['ee',.38,0,.1],['ea',.4,0,.1],['oo',.5,.85,.11],['ou',.55,.7,.11],['ow',.55,.7,.11],['ng',.2,0,.07]],
+SG={a:[.8,0,.11],e:[.5,0,.09],i:[.42,0,.09],o:[.68,.7,.11],u:[.45,.6,.1],y:[.35,0,.07],w:[.3,.8,.07],r:[.28,.4,.07],l:[.3,0,.06],b:[0,0,.06],p:[0,0,.06],m:[0,0,.06],f:[.12,0,.06],v:[.12,0,.06],s:[.1,0,.07],z:[.1,0,.07],t:[.22,0,.06],d:[.22,0,.06],n:[.22,0,.06],k:[.25,0,.06],g:[.25,0,.06],c:[.25,0,.06],q:[.25,.4,.06],h:[.3,0,.04],x:[.15,0,.08],j:[.3,.5,.08]};
+function build(txt){var ev=[],words=[],t=0,i=0,L=txt.toLowerCase(),n=L.length,inw=false,ch,d,k,g,p;
+while(i<n){ch=L[i];d=null;
+if(/[a-z0-9]/.test(ch)){if(!inw){words.push({ci:i,t:t});inw=true}
+for(k=0;k<DG.length;k++)if(L.substr(i,2)===DG[k][0]){d=DG[k];break}
+if(d){ev.push([t,t+d[3],d[1],d[2]]);t+=d[3];i+=2;continue}
+g=SG[ch]||(/\d/.test(ch)?[.5,.2,.12]:[.2,0,.06]);ev.push([t,t+g[2],g[0],g[1]]);t+=g[2];i++;continue}
+inw=false;p=/[.!?]/.test(ch)?.38:/[,;:]/.test(ch)?.22:ch===' '?.05:0;if(p){ev.push([t,t+p,ch===' '?.05:0,0]);t+=p}i++}
+return{ev:ev,words:words,D:t}}
+function visAt(tl,tc){var e=tl.ev,lo=0,hi=e.length-1,mid;if(!e.length||tc>=tl.D||tc<0)return[0,0];while(lo<hi){mid=(lo+hi+1)>>1;if(e[mid][0]<=tc)lo=mid;else hi=mid-1}return[e[lo][2],e[lo][3]]}
+function onB(me,ci){var w=me.tl.words,j,now=performance.now(),wt,rt,td;for(j=w.length-1;j>=0;j--)if(w[j].ci<=ci)break;if(j<0)j=0;if(!w.length)return;wt=w[j].t;
+if(me.lb){rt=(now-me.lb.tr)/1000;td=wt-me.lb.wt;if(rt>.04&&td>.01)me.scale+=(Math.max(.5,Math.min(2.2,td/rt))-me.scale)*.4}
+me.lb={tr:now,wt:wt};me.tc=wt;me.sync=(me.sync||0)+1}
+function lp(ts){var dt=Math.min(.05,fin((ts-last)/1000,.016)||.016),T=0,ak=24,i,f,bw,lo,mi,hi,nl,nm,nh,s2,rms,lv;last=ts;px+=(tx-px)*.08;py+=(ty-py)*.08;
+if(aon&&AN){AN.getFloatTimeDomainData(TD);AN.getByteFrequencyData(FD);s2=0;bw=AC.sampleRate/AN.fftSize;lo=mi=hi=nl=nm=nh=0;for(i=0;i<TD.length;i++)s2+=TD[i]*TD[i];rms=Math.sqrt(s2/TD.length);
 for(i=2;i<FD.length;i++){f=i*bw;if(f>300&&f<900){lo+=FD[i];nl++}else if(f>=1000&&f<3000){mi+=FD[i];nm++}else if(f>=4000&&f<8000){hi+=FD[i];nh++}}
-lo/=nl||1;mi/=nm||1;hi/=nh||1;pk=Math.max(pk*Math.pow(.9,dt),rms,.02);var lv=rms/pk;T=lv<.14?0:ss((lv-.14)/.55)*.88;if(hi>mi*1.25&&hi>40)T*=.35;ak=T>m?40:16;rd+=((lo>mi*1.35?.8:0)-rd)*(1-Math.exp(-dt*16))}
-else{if(sp&&sp.on){sp.i+=dt*14*sp.rate;ch=(sp.t[Math.floor(sp.i)]||' ').toLowerCase();T=Vw[ch]!==undefined?Vw[ch]:/[a-z]/.test(ch)?.28:/[,;]/.test(ch)?.04:ch==' '?.06:0;if(T>.1)T+=(Math.random()-.5)*.08;if(sp.i>sp.t.length+3&&!SS)sp.on=false}rd+=((Rr[ch]||0)-rd)*(1-Math.exp(-dt*16))}
-m+=(Math.max(0,T)-m)*(1-Math.exp(-dt*ak));
+lo/=nl||1;mi/=nm||1;hi/=nh||1;pk=Math.max(pk*Math.pow(.9,dt),rms,.02);lv=rms/pk;T=lv<.14?0:ss((lv-.14)/.55)*.88;if(hi>mi*1.25&&hi>40)T*=.35;ak=T>m?40:16;rd+=((lo>mi*1.35?.8:0)-rd)*(1-Math.exp(-dt*16))}
+else if(sp&&sp.on){if((sp.started||!SS)&&!sp.paused)sp.tc+=dt*sp.scale;var v=sp.started||!SS?visAt(sp.tl,sp.tc+.03):[0,0];T=v[0];ak=T>m?34:22;rd+=(v[1]-rd)*(1-Math.exp(-dt*18))}
+else{rd+=(0-rd)*(1-Math.exp(-dt*12))}
+m+=(Math.max(0,T)-m)*(1-Math.exp(-dt*ak));m=fin(m);if(T===0&&m<.004)m=0;
 if(!RM){if(bp>=0){bp+=dt;bk=bp<.06?bp/.06:bp<.1?1:bp<.2?1-(bp-.1)/.1:0;if(bp>=.2){bp=-1;bk=0;bt=2+Math.random()*3.5}}else{bt-=dt;if(bt<=0)bp=0}}
-if(S0&&(Math.abs(m-lm)>.004||Math.abs(bk-lk)>.01||lm<0)){dr(m,rd);lm=m;lk=bk;if(docked)dx.clearRect(0,0,160,160);dx.drawImage(c,90,40,540,540,0,0,160,160)}
-if(!RM&&!docked)sb.style.transform='rotateY('+(px*9+Math.sin(ts/2300)*1.2)+'deg) rotateX('+(-py*6+m*1)+'deg) scale('+(1+.004*Math.sin(ts/1300))+')';requestAnimationFrame(lp)}requestAnimationFrame(lp);
+if(S0&&(Math.abs(m-lm)>.004||Math.abs(bk-lk)>.01||lm<0)){dr(m,rd);lm=m;lk=bk;if(docked){dx.clearRect(0,0,160,160);dx.drawImage(c,90,40,540,540,0,0,160,160)}}
+if(!RM&&!docked)sb.style.transform='rotateY('+fin(px*9+Math.sin(ts/2300)*1.2).toFixed(2)+'deg) rotateX('+fin(-py*6+m).toFixed(2)+'deg) scale('+(1+.004*Math.sin(ts/1300)).toFixed(4)+')';requestAnimationFrame(lp)}requestAnimationFrame(lp);
+/* ---- microphone permission manager: ask once, check state first, never loop ---- */
+var micState='unknown',rc=null,listening=false;
+function fbState(){var g=false;try{g=localStorage.getItem('avMic')==='1'}catch(e){}return g?'granted':'prompt'}
+function micCheck(){if(navigator.permissions&&navigator.permissions.query)return navigator.permissions.query({name:'microphone'}).then(function(p){micState=p.state;p.onchange=function(){micState=p.state;if(p.state==='granted'){try{localStorage.setItem('avMic','1')}catch(e){}}else if(p.state==='denied'){try{localStorage.removeItem('avMic')}catch(e){}}};return p.state}).catch(function(){return fbState()});return Promise.resolve(fbState())}
+function micMsg(t){vn.textContent=t;addMsg('bot',t)}
+function micHelp(){micMsg('Microphone access is blocked for this site. To turn it on, click the lock or tune icon in the address bar, set Microphone to Allow, then reload the page. You can keep typing your questions in the meantime.')}
+function micEnsure(){if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){micMsg('This browser cannot access a microphone. Please type your question.');return Promise.resolve(false)}
+if(window.isSecureContext===false){micMsg('Voice input needs a secure (https) connection. Please type your question.');return Promise.resolve(false)}
+return micCheck().then(function(st){if(st==='granted')return true;if(st==='denied'){micHelp();return false}
+return navigator.mediaDevices.getUserMedia({audio:true}).then(function(s){s.getTracks().forEach(function(t){t.stop()});try{localStorage.setItem('avMic','1')}catch(e){}micState='granted';return true}).catch(function(e){if(/NotAllowed|Permission|Security/i.test(e&&e.name)){micState='denied';try{localStorage.removeItem('avMic')}catch(x){}micHelp()}else micMsg('No working microphone was found. Please check that one is connected and not in use.');return false})})}
+function initRc(){rc=new SR();rc.lang='en-US';rc.interimResults=false;rc.maxAlternatives=1;rc.continuous=false;
+rc.onresult=function(e){var tr=e.results[0][0].transcript;ask(tr)};
+rc.onerror=function(e){listening=false;$('#mic').textContent='🎤 Voice';if(e.error==='not-allowed'||e.error==='service-not-allowed'){micState='denied';micHelp()}else if(e.error==='no-speech')micMsg('I didn’t hear anything. Tap the microphone and try again.');else if(e.error!=='aborted')micMsg('Voice input stopped ('+e.error+'). You can type your question instead.')};
+rc.onend=function(){listening=false;$('#mic').textContent='🎤 Voice'}}
+$('#mic').onclick=function(){if(!SR){micMsg('Voice input is not supported in this browser. Please type your question, or try Chrome, Edge or Safari.');return}
+if(listening){try{rc.stop()}catch(e){}return}stopAll();killTour();
+micEnsure().then(function(ok){if(!ok)return;if(!rc)initRc();try{rc.start();listening=true;$('#mic').textContent='● Listening… (tap to stop)'}catch(e){listening=false}})};
+/* ---- audio-driven mode (real waveform) ---- */
 function aud(){if(AC)return;AC=new(window.AudioContext||window.webkitAudioContext)();AN=AC.createAnalyser();AN.fftSize=1024;AN.smoothingTimeConstant=0;AC.createMediaElementSource(au).connect(AN);AN.connect(AC.destination);FD=new Uint8Array(AN.frequencyBinCount);TD=new Float32Array(AN.fftSize)}
-function play(u){try{aud();if(AC.state=='suspended')AC.resume()}catch(e){vn.textContent='Audio analysis is not supported in this browser.';return}if(SS)SS.cancel();if(sp)sp.on=false;pk=.05;au.src=u;au.style.display='block';cap.textContent='Lip-sync is driven by the actual audio waveform.';au.play().catch(function(){vn.textContent='Press play on the audio bar to start.'})}
+function play(u){try{aud();if(AC.state==='suspended')AC.resume()}catch(e){vn.textContent='Audio analysis is not supported in this browser.';return}stopAll();pk=.05;au.src=u;au.style.display='block';cap.textContent='Lip-sync is driven by the actual audio waveform.';au.play().catch(function(){vn.textContent='Press play on the audio bar to start.'})}
 au.onplay=function(){aon=true};au.onpause=au.onended=function(){aon=false};
 $('#avf').onchange=function(e){var f=e.target.files[0];if(f)play(URL.createObjectURL(f))};
-$('#avr').onclick=function(){var btn=$('#avr');if(rec){rec.stop();return}if(!navigator.mediaDevices||!window.MediaRecorder){vn.textContent='Recording is not supported in this browser.';return}
-navigator.mediaDevices.getUserMedia({audio:true}).then(function(st){var ch=[],r=new MediaRecorder(st);rec=r;r.ondataavailable=function(e){ch.push(e.data)};r.onstop=function(){st.getTracks().forEach(function(t){t.stop()});rec=null;btn.textContent='● Record clip';play(URL.createObjectURL(new Blob(ch,{type:r.mimeType})))};r.start();btn.textContent='■ Stop and play';setTimeout(function(){if(r.state=='recording')r.stop()},30000)}).catch(function(){vn.textContent='Microphone unavailable or permission denied.'})};
-function vl(){return SS?SS.getVoices().filter(function(q){return /en[-_]US/i.test(q.lang)}):[]}
-function rk(q){var n=q.name;return /\bava\b/i.test(n)?0:/jenny|aria|samantha|allison|joanna|zira|google us english|nicole|emma|salli|kendra|kimberly/i.test(n)?1:/male|david|mark|guy|alex|fred|daniel|tom|george/i.test(n)?3:2}
-function fv(){if(!SS){sel.style.display='none';return}var v=vl().sort(function(a,b){return rk(a)-rk(b)}),cu=sel.value;sel.innerHTML='';v.forEach(function(q){var o=document.createElement('option');o.value=q.name;o.textContent=q.name.replace(/Microsoft /,'').replace(/ Online \(Natural\) - English \(United States\)/,' (Natural)').slice(0,30);sel.appendChild(o)});if(cu)sel.value=cu;
-if(!vn.textContent)vn.textContent=!v.length?'No American English voice found; the browser default will be used.':/\bava\b/i.test(v[0].name)?'Voice: '+v[0].name:'Ava is not installed here; using the closest American voice. Edge and Apple devices may offer Ava.'}
+$('#avr').onclick=function(){var btn=$('#avr');if(rec){rec.stop();return}
+micEnsure().then(function(ok){if(!ok||!window.MediaRecorder)return;navigator.mediaDevices.getUserMedia({audio:true}).then(function(st){var ch=[],r=new MediaRecorder(st);rec=r;r.ondataavailable=function(e){ch.push(e.data)};r.onstop=function(){st.getTracks().forEach(function(t){t.stop()});rec=null;btn.textContent='● Record clip';play(URL.createObjectURL(new Blob(ch,{type:r.mimeType})))};r.start();btn.textContent='■ Stop and play';setTimeout(function(){if(r.state==='recording')r.stop()},30000)}).catch(function(){micMsg('The microphone could not be started.')})})};
+/* ---- one female voice identity for every component ---- */
+var RATE=.96,PITCH=1.04,MALE=/\b(male|david|mark|guy|alex|fred|daniel|tom|george|james|richard|ryan|eric|brian|ralph|bruce|junior|rishi|aaron|arthur|oliver|gordon|lee|thomas|jorge|diego|luca|yuri)\b/i,FEM=/\b(ava|jenny|aria|samantha|zira|allison|joanna|salli|kendra|kimberly|nicole|emma|amy|ivy|olivia|sonia|libby|hazel|susan|karen|moira|tessa|victoria|serena|fiona|female|michelle|ana|natasha|google us english)\b/i;
+function voices(){return SS?SS.getVoices().filter(function(q){return /^en([-_]|$)/i.test(q.lang)}):[]}
+function vscore(q){var n=q.name,s=0;if(MALE.test(n)&&!/female/i.test(n))return-100;if(/\bava\b/i.test(n))s+=60;else if(/\b(jenny|aria|samantha|allison|joanna|emma|nicole)\b/i.test(n))s+=45;else if(FEM.test(n))s+=30;else return 0;if(/en[-_]US/i.test(q.lang))s+=15;if(/natural|neural|online|premium|enhanced/i.test(n))s+=12;return s}
+function fems(){var f=voices().map(function(q){return[q,vscore(q)]}).filter(function(a){return a[1]>0}).sort(function(a,b){return b[1]-a[1]}).map(function(a){return a[0]});if(f.length)return f;return voices().filter(function(q){return!MALE.test(q.name)&&/en[-_]US/i.test(q.lang)})}
+function curVoice(){var f=fems(),sv=null;try{sv=localStorage.getItem('avVoice')}catch(e){}var n=sel.value||sv;return f.filter(function(q){return q.name===n})[0]||f[0]||null}
+function fv(){if(!SS){sel.style.display='none';vn.textContent='Speech is not supported in this browser; captions only.';return}
+var f=fems().slice(0,5),cu=curVoice();sel.innerHTML='';f.forEach(function(q){var o=document.createElement('option');o.value=q.name;o.textContent=q.name.replace(/Microsoft /,'').replace(/ Online \(Natural\) - English \(United States\)/,' (Natural)').replace(/ - English.*$/,'').slice(0,28);sel.appendChild(o)});if(cu)sel.value=cu.name;
+vn.textContent=!f.length?'No female English voice is installed in this browser; the device default voice will be used.':'Voice: '+(cu?cu.name:f[0].name)}
+sel.onchange=function(){try{localStorage.setItem('avVoice',sel.value)}catch(e){}vn.textContent='Voice: '+sel.value};
 if(SS){SS.onvoiceschanged=fv;fv();setTimeout(fv,600)}else fv();
-function spoken(t){return t.replace(/₹/g,'rupees ').replace(/\bSQL\b/g,'S Q L').replace(/\bSPSS\b/g,'S P S S').replace(/Power BI/g,'Power B I').replace(/shivani12pvt@gmail\.com/g,'shivani 1 2 p v t at gmail dot com').replace(/linkedin\.com\/in\/shivanisp12/g,'LinkedIn').replace(/NIFTY/g,'Nifty').replace(/\b(\d+) lakh/g,'$1 lakh')}
-function add(k,t){var d=document.createElement('div');d.className='msg '+k;d.textContent=t;$('#cl2').appendChild(d);$('#cl2').scrollTop=1e5;return d}
-window.say=function(t,quiet){return new Promise(function(res){var sT=spoken(t),me,ut,v;cap.textContent=t;if(docked&&!quiet)add('bot',t);if(SS)SS.cancel();me=sp={t:sT,i:0,on:true,rate:.98};
-if(!SS){setTimeout(function(){if(sp===me)me.on=false;res()},sT.length/14*1000);return}
-ut=new SpeechSynthesisUtterance(sT);ut.lang='en-US';v=vl().filter(function(q){return q.name===sel.value})[0];if(v)ut.voice=v;ut.rate=.98;ut.pitch=1;ut.volume=muted?0:+$('#vol').value;ut.onboundary=function(e){if(me===sp)me.i=e.charIndex};ut.onend=ut.onerror=function(){if(me===sp)me.on=false;res()};SS.speak(ut);setTimeout(res,sT.length*120+4000)})};
+function spoken(t){return t.replace(/₹/g,'rupees ').replace(/\bSQL\b/g,'S Q L').replace(/\bSPSS\b/g,'S P S S').replace(/Power BI/g,'Power B I').replace(/shivani12pvt@gmail\.com/g,'shivani 1 2 p v t at gmail dot com').replace(/linkedin\.com\/in\/shivanisp12/g,'LinkedIn').replace(/NIFTY/g,'Nifty').replace(/%/g,' percent')}
+/* ---- speech queue: one sentence at a time, interruptible, no overlap ---- */
+var gen=0,Q=[],busy=false,pend=[],hist=[],inflight=null,ui={docked:false,panel:false,tour:false};
+function addMsg(k,t){var L2=$('#cl2'),d=document.createElement('div');d.className='msg '+k;d.textContent=t;L2.appendChild(d);while(L2.children.length>60)L2.removeChild(L2.firstChild);L2.scrollTop=1e5;return d}
+function stopAll(){gen++;Q=[];busy=false;if(SS)SS.cancel();if(sp)sp.on=false;try{au.pause()}catch(e){}if(inflight){inflight.abort();inflight=null}var p=pend;pend=[];p.forEach(function(f){f()})}
+function pump(gid){if(busy||gid!==gen)return;var it=Q.shift();if(!it)return;busy=true;utter(it.t,gid).then(function(){if(gid!==gen)return;busy=false;if(it.done)it.done();pump(gid)})}
+function utter(text,gid){return new Promise(function(res){if(gid!==gen){res();return}var spk=spoken(text),tl=build(spk),me={t:spk,tl:tl,tc:0,scale:RATE,on:true,lb:null,started:false,paused:false},done,u,v;sp=me;cap.textContent=text;
+done=function(){clearTimeout(me.wd);if(sp===me)me.on=false;res()};
+if(!SS){me.wd=setTimeout(done,tl.D*1000/me.scale+300);return}
+u=new SpeechSynthesisUtterance(spk);u.lang='en-US';v=curVoice();if(v)u.voice=v;u.rate=RATE;u.pitch=PITCH;u.volume=muted?0:fin(+$('#vol').value,1);
+u.onstart=function(){me.started=true};u.onboundary=function(e){if(sp===me&&(e.name==='word'||e.name===undefined))onB(me,e.charIndex)};u.onend=u.onerror=done;
+setTimeout(function(){if(gid===gen&&sp===me)SS.speak(u)},50);setTimeout(function(){me.started=true},900);me.wd=setTimeout(done,spk.length*150+6000)})}
+function sentences(t){return(t.match(/[^.!?]+[.!?]+["')\]]*|\S[^.!?]*$/g)||[t]).map(function(s){return s.trim()}).filter(Boolean)}
+window.say=function(t,quiet,fromTour){if(!fromTour)killTour();stopAll();var gid=gen;if(ui.docked&&!quiet)addMsg('bot',t);
+return new Promise(function(res){var rf=function(){res(false)},ss2=sentences(t);pend.push(rf);ss2.forEach(function(s,i){Q.push({t:s,done:i===ss2.length-1?function(){pend=pend.filter(function(x){return x!==rf});res(true)}:null})});pump(gid)})};
+/* ---- assistant state machine: stage -> docked, panel open/closed, tour on/off ---- */
 function go(h){var e=document.querySelector(h);if(e)e.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})}
-function dock(){if(docked)return;docked=true;document.body.classList.add('docked');sb.style.transform='';$('#dp').appendChild($('#chat'));dx.clearRect(0,0,160,160);dx.drawImage(c,90,40,540,540,0,0,160,160);window.scrollTo(0,0)}
-$('#dk').onclick=function(){var p=$('#dp');p.hidden=!p.hidden;if(!p.hidden)$('#cq').focus()};
-$('#dk').hidden=false;$('#dp').hidden=true;
-function stop(){tourOn=false;if(SS)SS.cancel();if(sp)sp.on=false;au.pause()}
-function mt(q,w){return new RegExp('\\b'+w+(w.length<=3?'\\b':'')).test(q)}
-function local(q){var s=q.toLowerCase(),best=null,bs=0;KB.forEach(function(e){var n=0;e.k.forEach(function(w){if(mt(s,w))n++});if(n>bs){bs=n;best=e}});
-return best?{reply:best.a,nav:best.nav}:{reply:'I don’t have that in my verified profile, so I won’t guess. You can ask about my experience, skills, projects, education, leadership, or how to reach me.'}}
-function ask(q){q=q.trim();if(!q)return;add('you',q);stop();if(/\b(tour|walk me|guide me)\b/i.test(q)){tour();return}
-var t=add('bot','…'),go2=/\b(show|take me|go to|open|navigate|scroll)\b/i.test(q);
-(AVATAR_API?fetch(AVATAR_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q.slice(0,300)})}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){var l=local(q);return{reply:String(j.reply||'').slice(0,900)||l.reply,nav:l.nav}}):Promise.resolve(local(q))).catch(function(){return local(q)}).then(function(a){t.textContent=a.reply;
-if(a.nav){var b=document.createElement('button');b.className='ib';b.textContent='→ Open section';b.onclick=function(){dock();go(a.nav)};t.appendChild(b);if(go2){dock();go(a.nav)}}say(a.reply,true)})}
-$('#cf').onsubmit=function(e){e.preventDefault();var i=$('#cq');ask(i.value);i.value=''};
-['Tell me about yourself','What is your experience?','Which tools do you use?','Show me your projects','How can I contact you?'].forEach(function(q){var b=document.createElement('button');b.className='ib';b.type='button';b.textContent=q;b.onclick=function(){ask(q)};$('#sg').appendChild(b)});
-$('#mic').onclick=function(){if(!SR){vn.textContent='Voice input is not supported in this browser. Type your question instead.';return}stop();var r=new SR(),mb=$('#mic');r.lang='en-US';r.interimResults=false;r.maxAlternatives=1;mb.textContent='● Listening…';
-r.onresult=function(e){ask(e.results[0][0].transcript)};r.onerror=function(e){vn.textContent=e.error=='not-allowed'?'Microphone permission was denied.':'Voice input failed ('+e.error+'). Type your question instead.'};r.onend=function(){mb.textContent='🎤 Voice'};try{r.start()}catch(e){mb.textContent='🎤 Voice'}};
+function dock(){if(ui.docked)return;ui.docked=docked=true;document.body.classList.add('docked');sb.style.transform='';$('#dp').appendChild($('#chat'));dx.clearRect(0,0,160,160);dx.drawImage(c,90,40,540,540,0,0,160,160);window.scrollTo(0,0)}
+function welcome(){addMsg('bot','Hi! I’m here to help you explore Shivani’s portfolio. What would you like to know?')}
+function openPanel(v){ui.panel=v;$('#dp').hidden=!v;$('#dk').setAttribute('aria-expanded',String(v));if(v){if(!$('#cl2').children.length)welcome();var q=$('#cq');if(q)q.focus()}}
+var dtEl=document.createElement('div');dtEl.hidden=true;dtEl.setAttribute('role','status');dtEl.style.cssText='background:var(--bg);border:1px solid var(--bd);padding:6px 10px;font:11px ui-monospace,monospace;color:var(--mu)';$('#dock').insertBefore(dtEl,$('#dk'));
+function tl2(t){dtEl.textContent=t;dtEl.hidden=!t}
 var INTRO="Hey, welcome. I’m glad you’re here. I’m Shivani Poojary, an MBA graduate in Finance and Analytics, and this is my digital space. Instead of a traditional portfolio, let me take you through my work: the loan applications I’ve assessed, the options I’ve valued, and the teams I’ve led. You can ask me anything by voice or by typing, or take the guided tour. Let’s begin.";
-var TOUR=[['#about',"I’m an MBA graduate in Finance and Analytics. My hands-on work so far is in credit risk assessment, options valuation and statistical analysis."],['#experience',"In June and July 2025 I interned in finance at Kanchana Hyundai. I verified loan documents, assessed auto loan applications averaging 7 lakh rupees, and tracked approval trends in Excel."],['#projects',"I have two academic projects: an options valuation study across the top 20 NIFTY 50 stocks using Black-Scholes, and a customer analytics study of 182 survey responses in SPSS."],['#lab',"This lab lets you try an options pricer, a loan affordability calculator and a Monte Carlo simulation. They are illustrative tools, not results from my projects."],['#education',"I hold an MBA in Finance and Analytics and a Bachelor of Commerce, plus certifications including the McKinsey Forward Program."],['#leadership',"I’ve led a village outreach team and a beach clean-up drive, and placed third in an intercollegiate speech competition."],['#contact',"That’s the tour. If you’d like to talk, you can reach me by email or on LinkedIn from here."]];
-function tour(){dock();stop();tourOn=true;var i=0;(function step(){if(!tourOn||i>=TOUR.length){tourOn=false;return}var s=TOUR[i++];go(s[0]);say(s[1]).then(function(){setTimeout(step,600)})})()}
-window.SPK={"Finance experience?":KB[2].a,"Technical tools?":KB[3].a,"Projects?":KB[4].a,"Education?":KB[5].a,"Leadership?":KB[6].a,"How to reach her?":KB[9].a};
-$('#enter').onclick=function(){$('#enter').disabled=true;say(INTRO).then(function(){$('#enter').disabled=false;$('#enter').textContent='↻ Replay';setTimeout(function(){if(!docked&&!$('#cl2').children.length)dock()},1500)})};
-$('#skip').onclick=function(){stop();dock()};$('#avp').onclick=function(){if(!SS)return;if(SS.paused){SS.resume();this.textContent='❚❚ Pause'}else if(SS.speaking){SS.pause();this.textContent='▶ Resume'}};$('#avm').onclick=function(){muted=!muted;this.setAttribute('aria-pressed',muted);this.textContent=muted?'🔇 Unmute':'🔊 Mute';au.muted=muted};$('#avcc').onclick=function(){var on=cap.style.visibility!='hidden';cap.style.visibility=on?'hidden':'visible';this.setAttribute('aria-pressed',!on)};$('#tour').onclick=tour;$('#avx').onclick=stop;sb.onclick=function(){stop();say(KB[1+Math.floor(Math.random()*8)].a)};
-addEventListener('keydown',function(e){if(e.key=='Escape')stop()});
-window.avAmp=function(){return m};window.avState=function(){return{m:m,k:bk,on:aon,docked:docked}};window.avPlay=play;window.avAsk=ask;})();
+var TOUR=[['#about',"I’m an MBA graduate in Finance and Analytics. My hands-on work so far is in credit risk assessment, options valuation and statistical analysis."],['#experience',"In June and July 2025 I interned in finance at Kanchana Hyundai. I verified loan documents, assessed auto loan applications averaging 7 lakh rupees, and tracked approval trends in Excel."],['#projects',"I have two academic projects: an options valuation study across the top 20 NIFTY 50 stocks using Black-Scholes, and a customer analytics study of 182 survey responses in SPSS."],['#lab',"This lab lets you try an options pricer, a loan affordability calculator and a Monte Carlo simulation. They are illustrative tools, not results from my projects."],['#credentials',"I hold an MBA in Finance and Analytics and a Bachelor of Commerce, plus certifications including the McKinsey Forward Program. I’ve also led a village outreach team and a beach clean-up drive, and placed third in an intercollegiate speech competition."],['#contact',"That’s the tour. If you’d like to talk, you can reach me by email or on LinkedIn from here."]],TOURG=0;
+function killTour(){if(!ui.tour)return;ui.tour=false;TOURG++;$('#tour').textContent='▶ Guided tour';tl2('')}
+function endTour(manual){var was=ui.tour;killTour();stopAll();if(was){addMsg('bot',manual?'Tour paused. Ask me anything, or restart the tour whenever you like.':'That’s the end of the tour. Ask me anything about Shivani’s work, or restart the tour any time.');openPanel(true)}}
+function startTour(){stopAll();killTour();ui.tour=true;var g=++TOURG,i=0;dock();openPanel(false);$('#tour').textContent='■ End tour';
+(function step(){if(!ui.tour||g!==TOURG)return;if(i>=TOUR.length){endTour(false);return}var s=TOUR[i++];tl2('Tour '+i+'/'+TOUR.length+' · tap me to pause');go(s[0]);say(s[1],true,true).then(function(ok){if(ok&&ui.tour&&g===TOURG)setTimeout(step,500)})})()}
+$('#dk').onclick=function(){if(ui.tour){endTour(true);return}openPanel(!ui.panel)};
+$('#tour').onclick=function(){if(ui.tour)endTour(true);else startTour()};
+/* ---- conversation: streamed LLM answer (server) with an honest offline fallback ---- */
+function setStatus(on){$('#ais').textContent=on?'AI assistant online · answers are generated from the verified profile.':AVATAR_API?'AI server unavailable · using offline profile search.':'Offline mode · answers are matched from the verified profile; the AI server is not configured.'}
+function mt(q,w){return new RegExp('\\b'+w+(w.length<=3?'\\b':'')).test(q)}
+function local(q){var s2=q.toLowerCase(),best=null,b2=0;KB.forEach(function(e){var n=0;e.k.forEach(function(w){if(mt(s2,w))n++});if(n>b2){b2=n;best=e}});return best?{reply:best.a,nav:best.nav}:{reply:'I don’t have a ready answer for that in offline mode. You can ask about my experience, skills, projects, education, leadership or contact details. Open-ended questions need the AI server to be connected.',nav:null}}
+function navBtn(el,h){var b=document.createElement('button');b.className='ib';b.type='button';b.textContent='→ Open section';b.onclick=function(){dock();go(h)};el.appendChild(b)}
+function ask(q){q=(q||'').trim().slice(0,300);if(!q)return;killTour();addMsg('you',q);stopAll();
+if(/\b(tour|walk me through|guide me)\b/i.test(q)){startTour();return}
+var gid=gen,el=addMsg('bot','…'),loc=local(q),go2=/\b(show|take me|go to|open|navigate|scroll)\b/i.test(q),sb2='',full='',got=false,buf='';
+function enq(s){if(gid===gen&&s){Q.push({t:s});pump(gid)}}
+function feed(t){sb2+=t;var mm;while((mm=/^([\s\S]*?[.!?]["')\]]*)\s+/.exec(sb2))){enq(mm[1].trim());sb2=sb2.slice(mm[0].length)}if(sb2.length>240){var ci=sb2.lastIndexOf(', ');if(ci>60){enq(sb2.slice(0,ci+1).trim());sb2=sb2.slice(ci+2)}}}
+function done(text,nav){hist.push({role:'user',content:q},{role:'assistant',content:text});if(hist.length>16)hist=hist.slice(-16);if(nav){navBtn(el,nav);if(go2){dock();go(nav)}}}
+function offline(){if(gid!==gen)return;setStatus(false);el.textContent=loc.reply;done(loc.reply,loc.nav);enq(loc.reply)}
+if(!AVATAR_API){offline();return}
+var ctl=new AbortController(),to=setTimeout(function(){ctl.abort()},25000);inflight=ctl;
+fetch(AVATAR_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q,history:hist.slice(-8)}),signal:ctl.signal}).then(function(r){if(!r.ok||!r.body)throw new Error('http '+r.status);var rd=r.body.getReader(),dec=new TextDecoder();el.textContent='';
+function rdl(){return rd.read().then(function(x){if(x.done)return;buf+=dec.decode(x.value,{stream:true});var i,ev,l,j;while((i=buf.indexOf('\n\n'))>=0){ev=buf.slice(0,i);buf=buf.slice(i+2);l=ev.split('\n').filter(function(z){return z.indexOf('data:')===0})[0];if(!l)continue;try{j=JSON.parse(l.slice(5))}catch(e){continue}if(j.error)throw new Error(j.error);if(j.t){got=true;full+=j.t;el.textContent=full;$('#cl2').scrollTop=1e5;feed(j.t)}}return rdl()})}return rdl()})
+.then(function(){clearTimeout(to);if(inflight===ctl)inflight=null;if(!full.trim())throw new Error('empty');if(sb2.trim())enq(sb2.trim());sb2='';setStatus(true);done(full.trim(),loc.nav)})
+.catch(function(){clearTimeout(to);if(inflight===ctl)inflight=null;if(gid!==gen)return;if(got&&full.trim()){if(sb2.trim())enq(sb2.trim());done(full.trim(),loc.nav);return}offline()})}
+$('#cf').onsubmit=function(e){e.preventDefault();var i=$('#cq');ask(i.value);i.value=''};
+['Tell me about yourself','What makes Shivani special?','Why should we hire her?','Which tools do you use?','Show me your projects'].forEach(function(q){var b=document.createElement('button');b.className='ib';b.type='button';b.textContent=q;b.onclick=function(){ask(q)};$('#sg').appendChild(b)});
+$('#rst').onclick=function(){stopAll();killTour();hist=[];$('#cl2').innerHTML='';welcome()};
+$('#enter').onclick=function(){var b=this;b.disabled=true;say(INTRO,true).then(function(ok){b.disabled=false;b.textContent='↻ Replay';if(ok)setTimeout(function(){if(!ui.docked&&!$('#cl2').children.length)dock()},1500)})};
+$('#skip').onclick=function(){stopAll();killTour();dock()};
+$('#avx').onclick=function(){if(ui.tour)endTour(true);else stopAll()};
+$('#avp').onclick=function(){if(!SS)return;if(sp&&sp.paused){SS.resume();sp.paused=false;this.textContent='❚❚ Pause'}else if(SS.speaking&&sp){SS.pause();sp.paused=true;this.textContent='▶ Resume'}};
+$('#avm').onclick=function(){muted=!muted;this.setAttribute('aria-pressed',String(muted));this.textContent=muted?'🔇 Unmute':'🔊 Mute';au.muted=muted;if(muted&&SS&&SS.speaking){SS.cancel()}};
+$('#avcc').onclick=function(){var on=cap.style.visibility!=='hidden';cap.style.visibility=on?'hidden':'visible';this.setAttribute('aria-pressed',String(!on))};
+sb.onclick=function(){var a=KB[1+Math.floor(Math.random()*8)];say(a.a,true)};
+$('#dk').hidden=false;$('#dp').hidden=true;
+addEventListener('keydown',function(e){if(e.key==='Escape'){if(ui.tour)endTour(true);else stopAll()}});
+if(AVATAR_API){fetch(AVATAR_API.replace(/\/api\/chat$/,'/api/health')).then(function(r){return r.json()}).then(function(j){setStatus(!!(j&&j.configured))}).catch(function(){setStatus(false)})}else setStatus(false);
+window.avState=function(){return{m:m,rd:rd,k:bk,on:aon,docked:ui.docked,speaking:!!(sp&&sp.on)}};window.avAmp=function(){return m};window.avPlay=play;window.avAsk=ask;window.avUI=ui;window.avBuild=build;window.avVisAt=visAt;window.avVoice=curVoice;window.avStop=function(){if(ui.tour)endTour(true);else stopAll()};window.avTour=startTour;window.avMic=micEnsure;window.avHist=function(){return hist};window.avSp=function(){return sp};})();
+
 
 /* art direction */
 (function(){var cs=$('#art'),x=cs.getContext('2d'),W,H,D,rings=[],t=0,last=0,lr=0,sb=$('#sb');
@@ -344,7 +465,17 @@ var all=$$('.kt');all.forEach(function(el){el.setAttribute('aria-label',el.textC
 if(RM||!matchMedia('(pointer:fine)').matches)return;var px=0,py=0,q=false;
 addEventListener('pointermove',function(e){px=e.clientX;py=e.clientY;if(!q){q=true;requestAnimationFrame(function(){q=false;all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;el.querySelectorAll('.ch').forEach(function(c){var b=c.getBoundingClientRect(),dd=Math.hypot(px-(b.left+b.width/2),py-(b.top+b.height/2)),w=300+450*Math.max(0,1-dd/240);c.style.fontVariationSettings="'wght' "+w.toFixed(0)+",'opsz' 144"})})})}})})();
 $$('.btn').forEach(function(b){if(!RM&&matchMedia('(pointer:fine)').matches){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+(e.clientX-r.left-r.width/2)*.14+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})}});
-$('#f').addEventListener('submit',function(ev){ev.preventDefault();location.href='mailto:shivani12pvt@gmail.com?subject='+encodeURIComponent($('#t').value+' — '+$('#n').value)+'&body='+encodeURIComponent('From: '+$('#n').value+' ('+$('#e').value+')\n\n'+$('#m').value)});
+var CONTACT_ENDPOINT=''; /* optional: set to a form service URL (e.g. https://formspree.io/f/XXXXXXXX). Empty = opens the visitor's email app, with a copy fallback. */
+(function(){var f=$('#f'),st=$('#fs'),btn=f.querySelector('button[type=submit]'),cp=$('#fcopy'),to='shivani12pvt@gmail.com',txt='';
+function msg(t,ok){st.textContent=t;st.style.color=ok?'var(--ac2)':'var(--ac)'}
+function val(){var n=$('#n').value.trim(),e=$('#e').value.trim(),m=$('#m').value.trim();if(!n)return'Please enter your name.';if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e))return'Please enter a valid email address.';if(m.length<10)return'Please write a message of at least 10 characters.';return''}
+f.addEventListener('submit',function(ev){ev.preventDefault();if($('#hp').value)return;var er=val();if(er){msg(er,false);return}
+var n=$('#n').value.trim(),e=$('#e').value.trim(),m=$('#m').value.trim(),t=$('#t').value,subj=t+' — '+n,body='From: '+n+' ('+e+')\n\n'+m;txt=to+'\nSubject: '+subj+'\n\n'+body;
+if(CONTACT_ENDPOINT){btn.disabled=true;msg('Sending…',true);fetch(CONTACT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:n,email:e,type:t,message:m,_subject:subj})}).then(function(r){if(!r.ok)throw new Error(r.status);msg('Thank you, your message was sent. I will reply by email.',true);f.reset();cp.hidden=true}).catch(function(){msg('Sorry, the message could not be sent. Please email '+to+' directly or copy the message below.',false);cp.hidden=false}).then(function(){btn.disabled=false});return}
+var a=document.createElement('a');a.href='mailto:'+to+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+msg('Your email app should have opened with the message ready to send. If nothing opened, use “Copy message” and email '+to+'.',true);cp.hidden=false});
+cp.onclick=function(){var t=txt||to;function ok(){msg('Copied. Paste it into your email app.',true)}function fb(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')?ok():msg('Copy failed. Please email '+to+' directly.',false)}catch(e){msg('Copy failed. Please email '+to+' directly.',false)}ta.remove()}
+if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok).catch(fb);else fb()}})();
 addEventListener('keydown',function(e){if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)||e.ctrlKey||e.metaKey||!document.body.classList.contains('docked'))return;var S=$$('main section[id]'),c=0;S.forEach(function(x,i){if(x.getBoundingClientRect().top<innerHeight*.4)c=i});if(e.key=='j')S[Math.min(S.length-1,c+1)].scrollIntoView();if(e.key=='k')S[Math.max(0,c-1)].scrollIntoView()});
 sT(cur);pf();
 </script></body></html>
